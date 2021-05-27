@@ -1,0 +1,184 @@
+{
+  "name" : "United States Marshals",
+  "id" : "us_marshals",
+  "author" : "Xekon#8266",
+  "version" : "0.1",
+  "alliance" : "lawmen",
+  "color" : "#0d407f",
+  "units" : {
+    "marshal" : {
+      "name" : "US Marshal",
+      "description" : "A United States marshal, bringing justice to the frontier.",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "US Marshal",
+          "movement" : 6,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            "revolver",
+            "heavy_ccw",
+            "plasma_rifle"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "leader"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "plasma_rifle"
+              ],
+              "withWeapon" : [
+                "shotgun",
+                "electric_carbine"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "revolver"
+              ],
+              "withWeapon" : [
+                "plasma_revolver",
+                "colt_revolver"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "heavy_ccw"
+              ],
+              "withWeapon" : [
+                "stun_baton"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "deputy" : {
+      "name" : "US Deputy",
+      "description" : "A United States deputy, bringing justice to the frontier.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "US Deputy",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "heavy_ccw",
+            {
+              "id" : "revolver",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "revolver",
+                  "count" : 1
+                }
+              ],
+              "withWeapon" : [
+                "rifle"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "minuteman" : {
+      "name" : "Minuteman",
+      "description" : "Local Militia, known for being ready at a minute's notice, hence the name.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Minuteman",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "charged_carbine",
+            "heavy_ccw"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "heavy_ccw"
+              ],
+              "withWeapon" : [
+                "stun_baton"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "ranger" : {
+      "name" : "US Ranger",
+      "description" : "A United States ranger, bringing justice to the frontier.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "US Ranger",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "heavy_ccw",
+            {
+              "id" : "charged_revolver",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "heavy_ccw"
+              ],
+              "withWeapon" : [
+                "stun_baton"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    }
+  },
+  "weapons" : {
+    "stun_baton" : {
+      "name" : "Stun Baton",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    }
+  },
+  "rules" : {},
+  "powers" : {},
+  "strategies" : [],
+  "relics" : []
+}

@@ -1,0 +1,572 @@
+{
+  "reportUrl" : "https://github.com/wargame-engine/weird_west/issues",
+  "name" : "Weird West (Beta)",
+  "id" : "weird_west",
+  "version" : "0.1",
+  "gameType" : "skirmish",
+  "alliances" : {
+    "outlaws" : {
+      "name" : "Outlaws"
+    },
+    "lawmen" : {
+      "name" : "Lawmen"
+    },
+    "union" : {
+      "name" : "U.S. Union"
+    },
+    "natives" : {
+      "name" : "Native Nations"
+    },
+    "aliens" : {
+      "name" : "Starbound Alliance"
+    },
+    "secret_society" : {
+      "name" : "Secret Society"
+    },
+    "confederation" : {
+      "name" : "Confederate Rebellion"
+    },
+    "monsters" : {
+      "name" : "Creatures of the Night"
+    }
+  },
+  "factions" : {
+    "us_marshals" : {
+      "name" : "United States Marshals",
+      "id" : "us_marshals",
+      "url" : "us_marshals.json",
+      "color" : "#0d407f",
+      "version" : "0.1",
+      "alliance" : "lawmen",
+      "description" : ""
+    },
+    "mercenaries" : {
+      "name" : "Mercenaries",
+      "id" : "mercenaries",
+      "url" : "mercenaries.json",
+      "color" : "#954535",
+      "version" : "0.1",
+      "alliance" : "outlaws",
+      "description" : ""
+    }
+  },
+  "categories" : {
+    "leader" : {
+      "name" : "Leader"
+    },
+    "core" : {
+      "name" : "Core"
+    },
+    "specialist" : {
+      "name" : "Specialist"
+    },
+    "heavy" : {
+      "name" : "Heavy"
+    },
+    "support" : {
+      "name" : "Support"
+    },
+    "fortification" : {
+      "name" : "Fortification"
+    }
+  },
+  "organizations" : {
+    "core" : {
+      "name" : "Generalist",
+      "cost" : 0,
+      "description" : "A well-rounded force for taking on any mission.",
+      "categories" : {
+        "leader" : {
+          "min" : 1,
+          "max" : 2
+        },
+        "core" : {
+          "min" : 2,
+          "max" : 8
+        },
+        "specialist" : {
+          "max" : 3
+        },
+        "heavy" : {
+          "max" : 2
+        },
+        "support" : {
+          "max" : 2
+        },
+        "fortification" : {
+          "max" : 4
+        }
+      }
+    },
+    "specialist" : {
+      "name" : "Specialist",
+      "cost" : 1,
+      "description" : "An elite force to deal with specific targets.",
+      "categories" : {
+        "leader" : {
+          "min" : 1,
+          "max" : 2
+        },
+        "core" : {
+          "max" : 3
+        },
+        "specialist" : {
+          "min" : 2,
+          "max" : 5
+        },
+        "heavy" : {
+          "max" : 2
+        },
+        "support" : {
+          "max" : 2
+        },
+        "fortification" : {
+          "max" : 4
+        }
+      }
+    },
+    "heavy" : {
+      "name" : "Heavy",
+      "cost" : 1,
+      "description" : "An heavy force with superior firepower.",
+      "categories" : {
+        "leader" : {
+          "min" : 1,
+          "max" : 2
+        },
+        "core" : {
+          "max" : 3
+        },
+        "specialist" : {
+          "max" : 3
+        },
+        "heavy" : {
+          "min" : 2,
+          "max" : 5
+        },
+        "support" : {
+          "max" : 2
+        },
+        "fortification" : {
+          "max" : 4
+        }
+      }
+    },
+    "support" : {
+      "name" : "Support",
+      "cost" : 1,
+      "description" : "A small supporting force.",
+      "categories" : {
+        "leader" : {
+          "max" : 1
+        },
+        "core" : {
+          "max" : 2
+        },
+        "specialist" : {
+          "max" : 2
+        },
+        "heavy" : {
+          "max" : 2
+        },
+        "support" : {
+          "max" : 2
+        },
+        "fortification" : {
+          "max" : 4
+        }
+      }
+    }
+  },
+  "relics" : {
+    "inspired" : {
+      "name" : "Inspired",
+      "rule" : "legend_courage",
+      "description" : "Upgrade one Leader model with Inspired.",
+      "flavor" : "This model inspires the best in those who serve them.",
+      "points" : 10
+    }
+  },
+  "weapons" : {
+    "heavy_hooves_and_teeth" : {
+      "name" : "Heavy Hooves and Teeth",
+      "attacks" : 1,
+      "short" : "Melee",
+      "ap" : 1
+    },
+    "hooves_and_teeth" : {
+      "name" : "Hooves and Teeth",
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "light_ccw" : {
+      "name" : "Light CCW",
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "heavy_ccw" : {
+      "name" : "Heavy CCW",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : "Melee"
+    },
+    "throwing_knife" : {
+      "name" : "Throwing Knives",
+      "attacks" : 1,
+      "short" : 6,
+      "rules" : [
+        "assault"
+      ]
+    },
+    "throwing_axe" : {
+      "name" : "Throwing Axe",
+      "attacks" : 1,
+      "short" : 6,
+      "ap" : 2,
+      "rules" : [
+        "assault"
+      ]
+    },
+    "revolver" : {
+      "name" : "Revolver",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        "pistol"
+      ]
+    },
+    "heavy_revolver" : {
+      "name" : "Heavy Revolver",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        "pistol"
+      ]
+    },
+    "colt_revolver" : {
+      "name" : "Colt Revolver",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        "pistol"
+      ]
+    },
+    "lever_action_revolver" : {
+      "name" : "Lever Action Revolver",
+      "ap" : 1,
+      "attacks" : 1,
+      "medium" : 12,
+      "short" : 6,
+      "rules" : [
+        "pistol",
+        "rapid_fire"
+      ]
+    },
+    "lever_action_heavy_revolver" : {
+      "name" : "Lever Action Heavy Revolver",
+      "ap" : 2,
+      "attacks" : 1,
+      "medium" : 12,
+      "short" : 6,
+      "rules" : [
+        "pistol",
+        "rapid_fire"
+      ]
+    },
+    "rifle" : {
+      "name" : "Rifle",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24
+    },
+    "carbine" : {
+      "name" : "Carbine",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault"
+      ]
+    },
+    "long_rifle" : {
+      "name" : "Long Rifle",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 18,
+      "medium" : 36
+    },
+    "lever_action_rifle" : {
+      "name" : "Lever Action Rifle",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rapid_fire"
+      ]
+    },
+    "lever_action_carbine" : {
+      "name" : "Lever Action Carbine",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "rapid_fire"
+      ]
+    },
+    "lever_action_long_rifle" : {
+      "name" : "Lever Action Long Rifle",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 18,
+      "medium" : 36,
+      "rules" : [
+        "rapid_fire"
+      ]
+    },
+    "sniper_rifle" : {
+      "name" : "Sniper Rifle",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : 18,
+      "medium" : 36,
+      "rules" : [
+        "sniper",
+        "reload"
+      ]
+    },
+    "shotgun" : {
+      "name" : "Shotgun",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "rending",
+        "reload"
+      ]
+    },
+    "double_barrel_shotgun" : {
+      "name" : "Double Barrel Shotgun",
+      "ap" : 2,
+      "attacks" : 2,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "rending",
+        "reload"
+      ]
+    },
+    "pump_action" : {
+      "name" : "Pump Action Shotgun",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "rending"
+      ]
+    },
+    "marlin_lever_action" : {
+      "name" : "Marlin Lever Action Rifle",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rapid_fire",
+        "crack_shot",
+        "reload"
+      ]
+    },
+    "sharps_rifle" : {
+      "name" : "Sharps Rifle",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : 18,
+      "medium" : 36,
+      "rules" : [
+        "sniper",
+        "reload"
+      ]
+    },
+    "lever_action_colt_revolver" : {
+      "name" : "Lever Action Colt Revolver",
+      "ap" : 3,
+      "attacks" : 1,
+      "medium" : 12,
+      "short" : 6,
+      "rules" : [
+        "pistol",
+        "rapid_fire"
+      ]
+    },
+    "long_bow" : {
+      "name" : "Longbow",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : 15,
+      "medium" : 30
+    },
+    "plasma_revolver" : {
+      "name" : "Plasma Revolver",
+      "rules" : [
+        "pistol"
+      ],
+      "profiles" : [
+        {
+          "name" : "Standard",
+          "attacks" : 1,
+          "ap" : 2,
+          "short" : 6,
+          "medium" : 12
+        },
+        {
+          "name" : "Overcharge",
+          "attacks" : 1,
+          "ap" : 3,
+          "short" : 6,
+          "medium" : 12,
+          "rules" : [
+            "overheat"
+          ]
+        }
+      ]
+    },
+    "plasma_rifle" : {
+      "name" : "Plasma Rifle",
+      "profiles" : [
+        {
+          "name" : "Standard",
+          "attacks" : 1,
+          "ap" : 2,
+          "short" : 12,
+          "medium" : 24
+        },
+        {
+          "name" : "Overcharge",
+          "attacks" : 1,
+          "ap" : 3,
+          "short" : 12,
+          "medium" : 24,
+          "rules" : [
+            "overheat"
+          ]
+        }
+      ]
+    },
+    "plasma_carbine" : {
+      "name" : "Plasma Carbine",
+      "rules" : [
+        "assault"
+      ],
+      "profiles" : [
+        {
+          "name" : "Standard",
+          "attacks" : 1,
+          "ap" : 2,
+          "short" : 9,
+          "medium" : 18
+        },
+        {
+          "name" : "Overcharge",
+          "attacks" : 1,
+          "ap" : 3,
+          "short" : 9,
+          "medium" : 18,
+          "rules" : [
+            "overheat"
+          ]
+        }
+      ]
+    },
+    "electric_rifle" : {
+      "name" : "Elecric Rifle",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rending"
+      ]
+    },
+    "electric_carbine" : {
+      "name" : "Electric Carbine",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "rending",
+        "assault"
+      ]
+    },
+    "charged_carbine" : {
+      "name" : "Charged Carbine",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "rending"
+      ]
+    },
+    "charged_revolver" : {
+      "name" : "Charged Revolver",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        "rending"
+      ]
+    },
+    "charged_sniper_rifle" : {
+      "name" : "Charged Sniper Rifle",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : 18,
+      "medium" : 36,
+      "rules" : [
+        "sniper",
+        "reload",
+        "rending"
+      ]
+    }
+  },
+  "rules" : {
+    "legend_wounds" : {
+      "name" : "Resilient",
+      "description" : "This model gains Wounds(+1).",
+      "points" : 10
+    },
+    "legend_courage" : {
+      "name" : "Inspired",
+      "description" : "This model gains +1 Courage.",
+      "points" : 10
+    },
+    "mount_horse" : {
+      "name" : "Horse",
+      "description" : "This model has +2\" Movement.",
+      "points" : 2
+    },
+    "skirmishers" : {
+      "name" : "Skirmishers",
+      "description" : "Models suffer -1 Accuracy when shooting at this unit at a range of more than 12\" and this unit has a 3“ coherency instead of a 2“ coherency if all models in it have this rule.",
+      "points" : 2
+    }
+  }
+}

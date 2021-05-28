@@ -4,7 +4,6 @@
   "author" : "Xekon#8266",
   "version" : "0.1",
   "alliance" : "lawmen",
-  "color" : "#0d407f",
   "units" : {
     "marshal" : {
       "name" : "US Marshal",

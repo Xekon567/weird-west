@@ -48,6 +48,15 @@
       "version" : "0.1",
       "alliance" : "outlaws",
       "description" : ""
+    },
+    "celestials" : {
+      "name" : "Celestials",
+      "id" : "celestials",
+      "url" : "celestials.json",
+      "color" : "#D6B85A",
+      "version" : "0.1",
+      "alliance" : "aliens",
+      "description" : ""
     }
   },
   "categories" : {
@@ -644,6 +653,45 @@
           ]
         }
       ]
+    },
+    "plasma_grenades" : {
+      "name" : "Plasma Grenades",
+      "profiles" : [
+        {
+          "name" : "Standard",
+          "attacks" : 1,
+          "short" : 6,
+          "ap" : 1,
+          "rules" : [
+            "grenade",
+            {
+              "id" : "blast",
+              "x" : 3
+            }
+          ]
+        },
+        {
+          "name" : "Overcharge",
+          "attacks" : 1,
+          "short" : 6,
+          "ap" : 3,
+          "rules" : [
+            "grenade",
+            "lethal",
+            "overheat"
+          ]
+        }
+      ]
+    },
+    "portal_gauntlet" : {
+      "name" : "Portal Gauntlet",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee",
+      "rules" : [
+        "lethal",
+        "portal_weapon"
+      ]
     }
   },
   "rules" : {
@@ -665,12 +713,24 @@
     "drag" : {
       "name" : "Drag",
       "description" : "When this weapon hits an enemy model, the enemy model is moved d5” towards this model. Models in the target unit cannot be Embarked, dragged out of the Play Area or into Impassable terrain.",
+      "points" : 2
+    },
+    "homing" : {
+      "name" : "Homing",
+      "description" : "This weapon hits at Accuracy +1.",
       "points" : [
-        "weapon.attacks",
-        {
-          "multiply" : 2
-        }
+        "weapon.attacks"
       ]
+    },
+    "portal_mastery" : {
+      "name" : "Portal Mastery",
+      "description" : "At any point during this unit's activation you can roll a die and on an 5 or less deploy a friendly _Portal_ unit in reserves within 3“ of this model, then scatter the _Portal_ model d5“ into a random direction. At any point during this unit's activation, if within 3\" of a _Portal_ unit, roll one die. On an 5 or less move the portal 3“ or put it into it’s owner’s reserves and replace it with a friendly _Portal_ model from your reserves, then scatter the _Portal_ model d5“ into a random direction.",
+      "points" : 10
+    },
+    "portal_weapon" : {
+      "name" : "Portal Weapon",
+      "description" : "At any point during this unit's activation, if within 3\" of a _Portal_ unit, roll one die. On an 5 or less move the portal 3“ or put it into it’s owner’s reserves and replace it with a friendly _Portal_ model from your reserves, then scatter the _Portal_ model d5“ into a random direction.",
+      "points" : 5
     }
   }
 }

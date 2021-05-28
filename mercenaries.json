@@ -16,12 +16,12 @@
           "courage" : 6,
           "shoot" : 5,
           "fight" : 6,
-          "defense" : 6,
+          "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
             "light_ccw",
             {
-              "id" : "charged_revolver",
+              "id" : "plasma_revolver",
               "count" : 2
             }
           ],
@@ -33,28 +33,22 @@
           "options" : [
             {
               "replaceWeapon" : [
-                {
-                  "id" : "charged_revolver",
-                  "count" : 2
-                }
+                "plasma_revolver"
               ],
               "withWeapon" : [
-                {
-                  "id" : "plasma_revolver",
-                  "count" : 2
-                },
-                {
-                  "id" : "shred_revolver",
-                  "count" : 2
-                }
-              ]
+                "charged_revolver",
+                "shred_revolver"
+              ],
+              "modelLimit" : 2
             },
             {
-              "addWeapon" : [
+              "replaceWeapon" : [
+                "charged_revolver"
+              ],
+              "withWeapon" : [
                 "shotgun",
                 "double_barrel_shotgun"
-              ],
-              "limit" : 1
+              ]
             }
           ]
         }
@@ -68,7 +62,7 @@
         {
           "name" : "Bandit",
           "movement" : 6,
-          "courage" : 4,
+          "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
           "defense" : 4,
@@ -103,7 +97,7 @@
         {
           "name" : "Raider",
           "movement" : 6,
-          "courage" : 4,
+          "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
           "defense" : 4,
@@ -146,22 +140,126 @@
         {
           "name" : "Sharpshooter",
           "movement" : 6,
-          "courage" : 4,
+          "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
           "defense" : 4,
           "reflexes" : 5,
           "weapons" : [
             "light_ccw",
-            "charged_sniper_rifle"
+            "sniper_rifle",
+            "charged_revolver"
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "sniper_rifle"
+              ],
+              "withWeapon" : [
+                "charged_sniper_rifle",
+                "shred_carbine"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "gunslinger" : {
+      "name" : "Gunslinger",
+      "description" : "",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Gunslinger",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            "light_ccw",
+            {
+              "id" : "plasma_revolver",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "plasma_revolver"
+              ],
+              "withWeapon" : [
+                "atomic_pistol",
+                "charged_revolver",
+                "shred_revolver"
+              ],
+              "modelLimit" : 2
+            },
+            {
+              "replaceWeapon" : [
+                "light_ccw"
+              ],
+              "withWeapon" : [
+                "heavy_ccw"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "engineer" : {
+      "name" : "Engineer",
+      "description" : "",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Engineer",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            "light_ccw",
+            {
+              "id" : "revolver",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "revolver"
+              ],
+              "withWeapon" : [
+                "grenade_launcher",
+                "energy_hammer",
+                "flamethrower_gauntlet"
+              ]
+            }
+          ]
         }
       ]
     }
   },
-  "weapons" : {},
+  "weapons" : {
+    "lasso" : {
+      "name" : "Lasso",
+      "attacks" : 1,
+      "short" : 6,
+      "rules" : [
+        "drag"
+      ]
+    }
+  },
   "rules" : {},
   "powers" : {},
   "strategies" : [],

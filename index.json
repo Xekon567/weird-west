@@ -337,10 +337,7 @@
       "short" : 12,
       "medium" : 24,
       "rules" : [
-        "crack_shot",
-        "lethal",
-        "rapid_fire",
-        "reload"
+        "crack_shot"
       ]
     },
     "shred_sniper_rifle" : {
@@ -351,7 +348,6 @@
       "medium" : 36,
       "rules" : [
         "crack_shot",
-        "lethal",
         "reload",
         "sniper"
       ]
@@ -364,7 +360,6 @@
       "short" : 6,
       "rules" : [
         "crack_shot",
-        "lethal",
         "pistol",
         "rapid_fire"
       ]
@@ -499,7 +494,8 @@
       "medium" : 12,
       "rules" : [
         "rending",
-        "rapid_fire"
+        "rapid_fire",
+        "pistol"
       ]
     },
     "charged_sniper_rifle" : {
@@ -544,6 +540,110 @@
       "rules" : [
         "rapid_fire"
       ]
+    },
+    "shred_carbine" : {
+      "name" : "Shred Carbine",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "crack_shot"
+      ]
+    },
+    "smoke_grenades" : {
+      "name" : "Smokes",
+      "attacks" : 1,
+      "short" : 6,
+      "rules" : [
+        "grenade",
+        "smoke",
+        "indirect"
+      ]
+    },
+    "frag_grenades" : {
+      "name" : "Frags",
+      "attacks" : 1,
+      "short" : 6,
+      "ap" : 1,
+      "rules" : [
+        "grenade",
+        {
+          "id" : "blast",
+          "x" : 3
+        }
+      ]
+    },
+    "grenade_launcher" : {
+      "name" : "Grenade Launcher",
+      "profiles" : [
+        {
+          "name" : "Frag",
+          "attacks" : 1,
+          "ap" : 1,
+          "short" : 6,
+          "medium" : 12,
+          "rules" : [
+            {
+              "id" : "blast",
+              "x" : 3
+            },
+            "indirect",
+            "scatter"
+          ]
+        },
+        {
+          "name" : "Smoke",
+          "attacks" : 1,
+          "short" : 9,
+          "rules" : [
+            "indirect",
+            "scatter",
+            "smoke"
+          ]
+        }
+      ]
+    },
+    "atomic_pistol" : {
+      "name" : "Atomic Pistol",
+      "ap" : 2,
+      "attacks" : 1,
+      "medium" : 12,
+      "short" : 6,
+      "rules" : [
+        "pistol",
+        "lethal"
+      ]
+    },
+    "energy_hammer" : {
+      "name" : "Energy Hammer",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
+    },
+    "flamethrower_gauntlet" : {
+      "name" : "Flamethrower Gauntlet",
+      "profiles" : [
+        {
+          "name" : "Melee",
+          "attacks" : 1,
+          "ap" : 1,
+          "short" : "Melee"
+        },
+        {
+          "name" : "Torrent",
+          "attacks" : 3,
+          "ap" : 1,
+          "short" : 6,
+          "rules" : [
+            "flame"
+          ]
+        }
+      ]
     }
   },
   "rules" : {
@@ -561,6 +661,16 @@
       "name" : "Horse",
       "description" : "This model has +2\" Movement.",
       "points" : 2
+    },
+    "drag" : {
+      "name" : "Drag",
+      "description" : "When this weapon hits an enemy model, the enemy model is moved d5” towards this model. Models in the target unit cannot be Embarked, dragged out of the Play Area or into Impassable terrain.",
+      "points" : [
+        "weapon.attacks",
+        {
+          "multiply" : 2
+        }
+      ]
     }
   }
 }

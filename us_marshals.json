@@ -17,10 +17,10 @@
           "courage" : 6,
           "shoot" : 5,
           "fight" : 6,
-          "defense" : 6,
+          "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "plasma_revolver",
+            "revolver",
             "heavy_ccw",
             "plasma_rifle"
           ],
@@ -41,10 +41,11 @@
             },
             {
               "replaceWeapon" : [
-                "plasma_revolver"
+                "revolver"
               ],
               "withWeapon" : [
-                "shred_revolver"
+                "shred_revolver",
+                "plasma_revolver"
               ]
             },
             {
@@ -67,7 +68,7 @@
         {
           "name" : "US Deputy",
           "movement" : 6,
-          "courage" : 4,
+          "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
           "defense" : 5,
@@ -82,10 +83,7 @@
           "options" : [
             {
               "replaceWeapon" : [
-                {
-                  "id" : "revolver",
-                  "count" : 1
-                }
+                "revolver"
               ],
               "withWeapon" : [
                 "rifle"
@@ -105,7 +103,7 @@
         {
           "name" : "Minuteman",
           "movement" : 6,
-          "courage" : 4,
+          "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
           "defense" : 5,
@@ -137,7 +135,7 @@
         {
           "name" : "US Ranger",
           "movement" : 6,
-          "courage" : 4,
+          "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
           "defense" : 5,
@@ -163,6 +161,118 @@
           "max" : 1
         }
       ]
+    },
+    "bounty_hunter" : {
+      "name" : "Bounty Hunter",
+      "description" : "A mercenary, hunting down wanted criminals.",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Bounty Hunter",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "heavy_ccw",
+            {
+              "id" : "revolver",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "revolver"
+              ],
+              "withWeapon" : [
+                "charged_rifle",
+                "shred_revolver",
+                "shred_carbine",
+                "charged_revolver",
+                "flamethrower_gauntlet"
+              ],
+              "modelLimit" : 2
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "revolver",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  "revolver",
+                  "grenade_launcher"
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "heavy_ccw"
+              ],
+              "withWeapon" : [
+                "stun_baton"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "sheriff" : {
+      "name" : "Sheriff",
+      "description" : "A local peace-keeper, trained to take down fearsome criminals",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "Sheriff",
+          "movement" : 6,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "heavy_ccw",
+            "lasso",
+            {
+              "id" : "revolver",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "revolver"
+              ],
+              "withWeapon" : [
+                "charged_rifle",
+                "shred_revolver",
+                "charged_revolver"
+              ],
+              "modelLimit" : 2
+            },
+            {
+              "replaceWeapon" : [
+                "heavy_ccw"
+              ],
+              "withWeapon" : [
+                "stun_baton"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "leader"
+          ]
+        }
+      ]
     }
   },
   "weapons" : {
@@ -173,6 +283,14 @@
       "short" : "Melee",
       "rules" : [
         "rending"
+      ]
+    },
+    "lasso" : {
+      "name" : "Lasso",
+      "attacks" : 1,
+      "short" : 6,
+      "rules" : [
+        "drag"
       ]
     }
   },

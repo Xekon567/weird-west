@@ -1,6 +1,6 @@
 {
   "reportUrl" : "https://github.com/wargame-engine/weird_west/issues",
-  "name" : "Weird West (Beta)",
+  "name" : "Weird West Skirmish (Beta)",
   "id" : "weird_west",
   "version" : "0.1",
   "gameType" : "skirmish",
@@ -234,7 +234,8 @@
       "short" : 6,
       "medium" : 12,
       "rules" : [
-        "pistol"
+        "pistol",
+        "rapid_fire"
       ]
     },
     "heavy_revolver" : {
@@ -244,7 +245,8 @@
       "short" : 6,
       "medium" : 12,
       "rules" : [
-        "pistol"
+        "pistol",
+        "rapid_fire"
       ]
     },
     "colt_revolver" : {
@@ -253,27 +255,6 @@
       "attacks" : 1,
       "short" : 6,
       "medium" : 12,
-      "rules" : [
-        "pistol"
-      ]
-    },
-    "lever_action_revolver" : {
-      "name" : "Lever Action Revolver",
-      "ap" : 1,
-      "attacks" : 1,
-      "medium" : 12,
-      "short" : 6,
-      "rules" : [
-        "pistol",
-        "rapid_fire"
-      ]
-    },
-    "lever_action_heavy_revolver" : {
-      "name" : "Lever Action Heavy Revolver",
-      "ap" : 2,
-      "attacks" : 1,
-      "medium" : 12,
-      "short" : 6,
       "rules" : [
         "pistol",
         "rapid_fire"
@@ -302,36 +283,6 @@
       "attacks" : 1,
       "short" : 18,
       "medium" : 36
-    },
-    "lever_action_rifle" : {
-      "name" : "Lever Action Rifle",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : 12,
-      "medium" : 24,
-      "rules" : [
-        "rapid_fire"
-      ]
-    },
-    "lever_action_carbine" : {
-      "name" : "Lever Action Carbine",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "rapid_fire"
-      ]
-    },
-    "lever_action_long_rifle" : {
-      "name" : "Lever Action Long Rifle",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : 18,
-      "medium" : 36,
-      "rules" : [
-        "rapid_fire"
-      ]
     },
     "sniper_rifle" : {
       "name" : "Sniper Rifle",
@@ -379,36 +330,41 @@
         "rending"
       ]
     },
-    "marlin_lever_action" : {
-      "name" : "Marlin Lever Action Rifle",
+    "shred_rifle" : {
+      "name" : "Shred Rifle",
       "ap" : 3,
       "attacks" : 1,
       "short" : 12,
       "medium" : 24,
       "rules" : [
-        "rapid_fire",
         "crack_shot",
+        "lethal",
+        "rapid_fire",
         "reload"
       ]
     },
-    "sharps_rifle" : {
-      "name" : "Sharps Rifle",
+    "shred_sniper_rifle" : {
+      "name" : "Shred Sniper Rifle",
       "ap" : 3,
       "attacks" : 1,
       "short" : 18,
       "medium" : 36,
       "rules" : [
-        "sniper",
-        "reload"
+        "crack_shot",
+        "lethal",
+        "reload",
+        "sniper"
       ]
     },
-    "lever_action_colt_revolver" : {
-      "name" : "Lever Action Colt Revolver",
+    "shred_revolver" : {
+      "name" : "Shred Revolver",
       "ap" : 3,
       "attacks" : 1,
       "medium" : 12,
       "short" : 6,
       "rules" : [
+        "crack_shot",
+        "lethal",
         "pistol",
         "rapid_fire"
       ]
@@ -423,7 +379,8 @@
     "plasma_revolver" : {
       "name" : "Plasma Revolver",
       "rules" : [
-        "pistol"
+        "pistol",
+        "rapid_fire"
       ],
       "profiles" : [
         {
@@ -513,6 +470,16 @@
         "assault"
       ]
     },
+    "charged_rifle" : {
+      "name" : "Charged Rifle",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rending"
+      ]
+    },
     "charged_carbine" : {
       "name" : "Charged Carbine",
       "ap" : 1,
@@ -531,7 +498,8 @@
       "short" : 6,
       "medium" : 12,
       "rules" : [
-        "rending"
+        "rending",
+        "rapid_fire"
       ]
     },
     "charged_sniper_rifle" : {
@@ -544,6 +512,37 @@
         "sniper",
         "reload",
         "rending"
+      ]
+    },
+    "assault_rifle" : {
+      "name" : "Assault Rifle",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rapid_fire"
+      ]
+    },
+    "assault_carbine" : {
+      "name" : "Assault Carbine",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "rapid_fire"
+      ]
+    },
+    "assault_long_rifle" : {
+      "name" : "Assault Long Rifle",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : 18,
+      "medium" : 36,
+      "rules" : [
+        "rapid_fire"
       ]
     }
   },
@@ -561,11 +560,6 @@
     "mount_horse" : {
       "name" : "Horse",
       "description" : "This model has +2\" Movement.",
-      "points" : 2
-    },
-    "skirmishers" : {
-      "name" : "Skirmishers",
-      "description" : "Models suffer -1 Accuracy when shooting at this unit at a range of more than 12\" and this unit has a 3“ coherency instead of a 2“ coherency if all models in it have this rule.",
       "points" : 2
     }
   }

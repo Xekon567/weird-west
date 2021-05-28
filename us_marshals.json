@@ -4,6 +4,7 @@
   "author" : "Xekon#8266",
   "version" : "0.1",
   "alliance" : "lawmen",
+  "color" : "#0d407f",
   "units" : {
     "marshal" : {
       "name" : "US Marshal",
@@ -19,7 +20,7 @@
           "defense" : 6,
           "reflexes" : 6,
           "weapons" : [
-            "revolver",
+            "plasma_revolver",
             "heavy_ccw",
             "plasma_rifle"
           ],
@@ -40,11 +41,10 @@
             },
             {
               "replaceWeapon" : [
-                "revolver"
+                "plasma_revolver"
               ],
               "withWeapon" : [
-                "plasma_revolver",
-                "colt_revolver"
+                "shred_revolver"
               ]
             },
             {

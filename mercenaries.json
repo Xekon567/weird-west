@@ -21,10 +21,9 @@
           "weapons" : [
             "light_ccw",
             {
-              "id" : "revolver",
+              "id" : "charged_revolver",
               "count" : 2
-            },
-            "shotgun"
+            }
           ],
           "min" : 1,
           "max" : 1,
@@ -35,24 +34,27 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "revolver",
+                  "id" : "charged_revolver",
                   "count" : 2
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "charged_revolver",
+                  "id" : "plasma_revolver",
+                  "count" : 2
+                },
+                {
+                  "id" : "shred_revolver",
                   "count" : 2
                 }
               ]
             },
             {
-              "replaceWeapon" : [
-                "shotgun"
-              ],
-              "withWeapon" : [
+              "addWeapon" : [
+                "shotgun",
                 "double_barrel_shotgun"
-              ]
+              ],
+              "limit" : 1
             }
           ]
         }
@@ -163,5 +165,6 @@
   "rules" : {},
   "powers" : {},
   "strategies" : [],
-  "relics" : []
+  "relics" : [],
+  "color" : "#954535"
 }

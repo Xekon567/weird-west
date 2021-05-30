@@ -222,7 +222,7 @@
     "throwing_knife" : {
       "name" : "Throwing Knives",
       "attacks" : 1,
-      "short" : 6,
+      "short" : 9,
       "rules" : [
         "assault"
       ]
@@ -230,7 +230,7 @@
     "throwing_axe" : {
       "name" : "Throwing Axe",
       "attacks" : 1,
-      "short" : 6,
+      "short" : 9,
       "ap" : 2,
       "rules" : [
         "assault"
@@ -258,15 +258,16 @@
         "rapid_fire"
       ]
     },
-    "colt_revolver" : {
-      "name" : "Colt Revolver",
+    "magnum_revolver" : {
+      "name" : "Magnum Revolver",
       "ap" : 3,
       "attacks" : 1,
       "short" : 6,
       "medium" : 12,
       "rules" : [
         "pistol",
-        "rapid_fire"
+        "rapid_fire",
+        "lethal"
       ]
     },
     "rifle" : {
@@ -312,8 +313,7 @@
       "medium" : 18,
       "rules" : [
         "assault",
-        "rending",
-        "reload"
+        "rending"
       ]
     },
     "double_barrel_shotgun" : {
@@ -324,8 +324,7 @@
       "medium" : 18,
       "rules" : [
         "assault",
-        "rending",
-        "reload"
+        "rending"
       ]
     },
     "pump_action" : {
@@ -341,7 +340,7 @@
     },
     "shred_rifle" : {
       "name" : "Shred Rifle",
-      "ap" : 3,
+      "ap" : 4,
       "attacks" : 1,
       "short" : 12,
       "medium" : 24,
@@ -351,7 +350,7 @@
     },
     "shred_sniper_rifle" : {
       "name" : "Shred Sniper Rifle",
-      "ap" : 3,
+      "ap" : 4,
       "attacks" : 1,
       "short" : 18,
       "medium" : 36,
@@ -363,7 +362,7 @@
     },
     "shred_revolver" : {
       "name" : "Shred Revolver",
-      "ap" : 3,
+      "ap" : 4,
       "attacks" : 1,
       "medium" : 12,
       "short" : 6,
@@ -502,9 +501,9 @@
       "short" : 6,
       "medium" : 12,
       "rules" : [
-        "rending",
         "rapid_fire",
-        "pistol"
+        "pistol",
+        "rending"
       ]
     },
     "charged_sniper_rifle" : {
@@ -552,7 +551,7 @@
     },
     "shred_carbine" : {
       "name" : "Shred Carbine",
-      "ap" : 3,
+      "ap" : 4,
       "attacks" : 1,
       "short" : 9,
       "medium" : 18,
@@ -692,6 +691,94 @@
         "lethal",
         "portal_weapon"
       ]
+    },
+    "throwing_cards" : {
+      "name" : "Throwing Cards",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : 9,
+      "rules" : [
+        "assault",
+        "rending"
+      ]
+    },
+    "bionic_arm" : {
+      "name" : "Bionic Arm",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : "Melee"
+    },
+    "lasso" : {
+      "name" : "Lasso",
+      "attacks" : 1,
+      "short" : 6,
+      "rules" : [
+        "drag"
+      ]
+    },
+    "magnum_peacekeeper" : {
+      "name" : "Magnum Peacekeeper",
+      "ap" : 4,
+      "attacks" : 1,
+      "medium" : 12,
+      "short" : 6,
+      "rules" : [
+        "crack_shot",
+        "pistol",
+        "rapid_fire",
+        {
+          "id" : "deadly",
+          "x" : 2
+        }
+      ]
+    },
+    "gatling_gun" : {
+      "name" : "Gatling Gun",
+      "attacks" : 3,
+      "ap" : 2,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rapid_fire",
+        "reload"
+      ]
+    },
+    "flamethrower" : {
+      "ap" : 1,
+      "attacks" : 5,
+      "medium" : 12,
+      "short" : 6,
+      "name" : "Flamethrower",
+      "rules" : [
+        "flame"
+      ]
+    },
+    "rocket_pod" : {
+      "name" : "Rocket Pod",
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "ap" : 3,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 3
+        },
+        "indirect"
+      ]
+    },
+    "charged_gatling_gun" : {
+      "name" : "Charged Gatling Gun",
+      "attacks" : 3,
+      "ap" : 2,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rapid_fire",
+        "reload",
+        "lethal",
+        "rending"
+      ]
     }
   },
   "rules" : {
@@ -731,6 +818,11 @@
       "name" : "Portal Weapon",
       "description" : "At any point during this unit's activation, if within 3\" of a _Portal_ unit, roll one die. On an 5 or less move the portal 3“ or put it into it’s owner’s reserves and replace it with a friendly _Portal_ model from your reserves, then scatter the _Portal_ model d5“ into a random direction.",
       "points" : 5
+    },
+    "shield_generator" : {
+      "name" : "Shield Generator",
+      "description" : "This and all friendly units within 6\" have +1 Save.",
+      "points" : 10
     }
   }
 }

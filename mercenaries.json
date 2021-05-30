@@ -19,9 +19,9 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "light_ccw",
+            "bionic_arm",
             {
-              "id" : "plasma_revolver",
+              "id" : "charged_revolver",
               "count" : 2
             }
           ],
@@ -33,10 +33,10 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "plasma_revolver"
+                "charged_revolver"
               ],
               "withWeapon" : [
-                "charged_revolver",
+                "plasma_revolver",
                 "shred_revolver"
               ],
               "modelLimit" : 2
@@ -104,26 +104,20 @@
           "reflexes" : 5,
           "weapons" : [
             "light_ccw",
-            {
-              "id" : "charged_revolver",
-              "count" : 2
-            }
+            "charged_revolver",
+            "charged_carbine"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "charged_revolver"
-              ],
-              "withWeapon" : [
-                "charged_carbine"
-              ]
-            },
-            {
-              "replaceWeapon" : [
+                "charged_carbine",
                 "light_ccw"
               ],
               "withWeapon" : [
-                "heavy_ccw"
+                [
+                  "charged_revolver",
+                  "heavy_ccw"
+                ]
               ]
             }
           ],
@@ -155,11 +149,18 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "sniper_rifle"
+                "sniper_rifle",
+                "light_ccw"
               ],
               "withWeapon" : [
-                "charged_sniper_rifle",
-                "shred_carbine"
+                [
+                  "shred_carbine",
+                  "heavy_ccw"
+                ],
+                [
+                  "charged_sniper_rifle",
+                  "bionic_arm"
+                ]
               ]
             }
           ]
@@ -182,7 +183,7 @@
           "weapons" : [
             "light_ccw",
             {
-              "id" : "plasma_revolver",
+              "id" : "charged_revolver",
               "count" : 2
             }
           ],
@@ -191,14 +192,22 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "plasma_revolver"
+                {
+                  "id" : "charged_revolver",
+                  "count" : 2
+                }
               ],
               "withWeapon" : [
-                "atomic_pistol",
-                "charged_revolver",
-                "shred_revolver"
-              ],
-              "modelLimit" : 2
+                "shred_revolver",
+                {
+                  "id" : "atomic_pistol",
+                  "count" : 2
+                },
+                {
+                  "id" : "plasma_revolver",
+                  "count" : 2
+                }
+              ]
             },
             {
               "replaceWeapon" : [
@@ -228,7 +237,7 @@
           "weapons" : [
             "light_ccw",
             {
-              "id" : "revolver",
+              "id" : "plasma_revolver",
               "count" : 2
             }
           ],
@@ -237,7 +246,10 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "revolver"
+                {
+                  "id" : "plasma_revolver",
+                  "count" : 1
+                }
               ],
               "withWeapon" : [
                 "grenade_launcher",
@@ -248,18 +260,78 @@
           ]
         }
       ]
-    }
-  },
-  "weapons" : {
-    "lasso" : {
-      "name" : "Lasso",
-      "attacks" : 1,
-      "short" : 6,
-      "rules" : [
-        "drag"
+    },
+    "robot_hound" : {
+      "name" : "Robot Hound",
+      "description" : "A mechanical beast, hunting down anyone and anything.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Robot Hound",
+          "movement" : 8,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "scout"
+          ]
+        }
+      ],
+      "keywords" : [
+        "Automaton"
+      ]
+    },
+    "gun_hound" : {
+      "name" : "Gun Hound",
+      "description" : "A mechanical beast, armed with heavy weaponry.",
+      "category" : "heavy",
+      "models" : [
+        {
+          "name" : "Gun Hound",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            },
+            "flamethrower"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "flamethrower"
+              ],
+              "withWeapon" : [
+                "charged_gatling_gun",
+                "rocket_pod"
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Automaton"
       ]
     }
   },
+  "weapons" : {},
   "rules" : {},
   "powers" : {},
   "strategies" : [],

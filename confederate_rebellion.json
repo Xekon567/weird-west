@@ -1,0 +1,529 @@
+{
+  "name" : "Confederate Rebellion",
+  "id" : "confederate_rebellion",
+  "author" : "Xekon#8266",
+  "version" : "0.1",
+  "alliance" : "outlaws",
+  "units" : {
+    "general" : {
+      "name" : "General",
+      "description" : "",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "General",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            "bionic_arm",
+            "energy_sabre",
+            "smoke_grenades",
+            "atomic_pistol"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "leader",
+            "scout",
+            "evasive"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "bionic_arm",
+                "atomic_pistol"
+              ],
+              "withWeapon" : [
+                "magnum_peacekeeper"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rebel_scout" : {
+      "name" : "Rebel Scout",
+      "description" : "",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Rebel Scout",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            "throwing_axe",
+            {
+              "id" : "heavy_revolver",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "evasive",
+            "scout"
+          ]
+        }
+      ]
+    },
+    "rebel_sniper" : {
+      "name" : "Rebel Sniper",
+      "description" : "",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Rebel Sniper",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            "light_ccw",
+            "heavy_revolver",
+            "plasma_rifle"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "evasive",
+            "deadeye"
+          ]
+        }
+      ]
+    },
+    "captain" : {
+      "name" : "Captain",
+      "description" : "",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Captain",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "energy_sabre",
+            "carbine",
+            {
+              "id" : "revolver",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "carbine",
+                {
+                  "id" : "revolver",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  "shred_carbine",
+                  "heavy_revolver"
+                ],
+                [
+                  "revolver",
+                  "energy_sabre"
+                ],
+                [
+                  "atomic_pistol",
+                  "lasso"
+                ]
+              ]
+            }
+          ],
+          "rules" : [
+            "evasive"
+          ]
+        }
+      ]
+    },
+    "robot_hound" : {
+      "name" : "Robot Hound",
+      "description" : "A mechanical beast, hunting down anyone and anything.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Robot Hound",
+          "movement" : 8,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "scout"
+          ]
+        }
+      ],
+      "keywords" : [
+        "Automaton"
+      ]
+    },
+    "gun_hound" : {
+      "name" : "Gun Hound",
+      "description" : "A mechanical beast, armed with heavy weaponry.",
+      "category" : "heavy",
+      "models" : [
+        {
+          "name" : "Gun Hound",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            },
+            "flamethrower"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "flamethrower"
+              ],
+              "withWeapon" : [
+                "charged_gatling_gun",
+                "rocket_pod"
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Automaton"
+      ]
+    },
+    "confederate_terminator" : {
+      "name" : "Confederate Terminator",
+      "description" : "",
+      "category" : "heavy",
+      "models" : [
+        {
+          "name" : "Confederate Terminator",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "heavy_ccw",
+            "gatling_shotguns"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "sergeant" : {
+      "name" : "Sergeant",
+      "description" : "",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Sergeant",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "energy_sabre",
+            "charged_rifle",
+            "charged_revolver",
+            "smoke_grenades"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "evasive",
+            "deadeye",
+            "scout"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "charged_rifle",
+                "charged_revolver"
+              ],
+              "withWeapon" : [
+                "flamethrower",
+                {
+                  "id" : "atomic_pistol",
+                  "count" : 2
+                },
+                "double_barrel_shotgun",
+                "explosive_crossbow"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rebel_scout_heavy" : {
+      "name" : "Rebel Scout Heavy",
+      "description" : "",
+      "category" : "heavy",
+      "models" : [
+        {
+          "name" : "Rebel Scout Heavy",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            "throwing_axe",
+            {
+              "id" : "heavy_revolver",
+              "count" : 2
+            },
+            "plasma_grenades"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "evasive"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_revolver",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "electric_carbine",
+                  "count" : 2
+                },
+                "charged_gatling_gun",
+                "rocket_pod",
+                "charged_sniper_rifle",
+                "flamethrower",
+                "double_barrel_shotgun",
+                "plasma_shotgun"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rebel_sniper_heavy" : {
+      "name" : "Rebel Sniper Heavy",
+      "description" : "",
+      "category" : "heavy",
+      "models" : [
+        {
+          "name" : "Rebel Sniper",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            "light_ccw",
+            "heavy_revolver",
+            "plasma_rifle",
+            "plasma_grenades"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "evasive",
+            "deadeye"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "plasma_rifle"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "electric_carbine",
+                  "count" : 2
+                },
+                "charged_gatling_gun",
+                "rocket_pod",
+                "charged_sniper_rifle",
+                "flamethrower",
+                "double_barrel_shotgun",
+                "plasma_shotgun"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "general_bike" : {
+      "name" : "General on Hoverbike",
+      "description" : "",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "General on Hoverbike",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            "bionic_arm",
+            {
+              "id" : "electric_carbine",
+              "count" : 2
+            },
+            {
+              "id" : "heavy_revolver",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "leader",
+            "scout",
+            {
+              "id" : "impact",
+              "x" : 1
+            }
+          ]
+        }
+      ]
+    },
+    "corporal" : {
+      "name" : "Corporal",
+      "description" : "",
+      "category" : "heavy",
+      "models" : [
+        {
+          "name" : "Coporal",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "energy_sabre",
+            "grenade_launcher"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "grenade_launcher"
+              ],
+              "withWeapon" : [
+                "gatling_gun",
+                "sniper_rifle"
+              ]
+            }
+          ],
+          "rules" : [
+            "evasive"
+          ]
+        }
+      ]
+    }
+  },
+  "weapons" : {
+    "gatling_shotguns" : {
+      "name" : "Gatling Shotguns",
+      "ap" : 3,
+      "attacks" : 3,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "lethal",
+        "reload",
+        "flame"
+      ]
+    },
+    "plasma_shotgun" : {
+      "name" : "Plasma Shotgun",
+      "profiles" : [
+        {
+          "name" : "Standard",
+          "attacks" : 1,
+          "short" : 9,
+          "ap" : 2,
+          "rules" : [
+            "assault",
+            "rending"
+          ],
+          "medium" : 18
+        },
+        {
+          "name" : "Overcharge",
+          "attacks" : 1,
+          "short" : 9,
+          "ap" : 3,
+          "rules" : [
+            "assault",
+            "lethal",
+            "overheat"
+          ],
+          "medium" : 18
+        }
+      ]
+    },
+    "explosive_crossbow" : {
+      "name" : "Explosive Crossbow",
+      "ap" : 3,
+      "attacks" : 1,
+      "medium" : 18,
+      "short" : 9,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 3
+        },
+        "assault"
+      ]
+    }
+  },
+  "rules" : {},
+  "powers" : {},
+  "strategies" : [],
+  "relics" : [],
+  "color" : "#954535"
+}

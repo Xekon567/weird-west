@@ -23,11 +23,11 @@
     "secret_society" : {
       "name" : "Secret Society"
     },
-    "confederation" : {
-      "name" : "Confederate Rebellion"
-    },
     "monsters" : {
       "name" : "Creatures of the Night"
+    },
+    "covenant" : {
+      "name" : "The Covenant"
     }
   },
   "factions" : {
@@ -230,11 +230,12 @@
     "throwing_axe" : {
       "name" : "Throwing Axe",
       "attacks" : 1,
-      "short" : 9,
-      "ap" : 2,
+      "ap" : 1,
       "rules" : [
         "assault"
-      ]
+      ],
+      "short" : "Melee",
+      "medium" : 9
     },
     "revolver" : {
       "name" : "Revolver",
@@ -779,6 +780,15 @@
         "lethal",
         "rending"
       ]
+    },
+    "energy_sabre" : {
+      "name" : "Energy Sabre",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
     }
   },
   "rules" : {
@@ -800,7 +810,7 @@
     "drag" : {
       "name" : "Drag",
       "description" : "When this weapon hits an enemy model, the enemy model is moved d5” towards this model. Models in the target unit cannot be Embarked, dragged out of the Play Area or into Impassable terrain.",
-      "points" : 2
+      "points" : 5
     },
     "homing" : {
       "name" : "Homing",
@@ -823,6 +833,65 @@
       "name" : "Shield Generator",
       "description" : "This and all friendly units within 6\" have +1 Save.",
       "points" : 10
+    },
+    "deadeye" : {
+      "name" : "Deadeye",
+      "description" : "This model may ignore the Long Range penalty. You may choose which model is hit even if it has Leader and these hits may not be reassigned to other friendly units.",
+      "points" : 2
+    },
+    "linked" : {
+      "name" : "Linked",
+      "description" : "Re-roll failed hit rolls of 9+ when attacking with this weapon.",
+      "points" : 2
+    },
+    "push" : {
+      "name" : "Push",
+      "description" : "When an enemy model in a unit is hit by this weapon, the enemy model scatters d5”. Models in the unit cannot be placed out of the Play Area, into Impassable terrain or within a building or model with _Transport_. Models within a building or within a model with _Transport_ cannot be Pushed.",
+      "points" : 5
+    },
+    "hazardous" : {
+      "name" : "Hazardous",
+      "description" : "Models hit by this weapon cannot make reactions until the end of their activation and take a single AP0 hit at the end of their activation.",
+      "points" : 5
+    },
+    "drag_crit" : {
+      "name" : "Drag (Critical)",
+      "description" : "When this weapon hits an enemy model with an attack roll of 1 or 2, the enemy model is moved d5” towards this model. Models in the target unit cannot be Embarked, dragged out of the Play Area or into Impassable terrain.",
+      "points" : 2
+    },
+    "push_crit" : {
+      "name" : "Push (Critical)",
+      "description" : "When an enemy model in a unit is hit by this weapon with an attack roll of 1 or 2, the enemy model scatters d5”. Models in the unit cannot be placed out of the Play Area, into Impassable terrain or within a building or model with _Transport_. Models within a building or within a model with _Transport_ cannot be Pushed.",
+      "points" : 2
+    },
+    "hazardous_crit" : {
+      "name" : "Hazardous (Critical)",
+      "description" : "Models hit by this weapon by an attack roll of 1 or 2 cannot make reactions until the end of their activation and take a single AP0 hit at the end of their activation.",
+      "points" : 2
+    },
+    "stun" : {
+      "name" : "Stun",
+      "description" : "If this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack.",
+      "points" : 1
+    },
+    "stun_crit" : {
+      "name" : "Stun (Critical)",
+      "description" : "If this weapon hits its target, on an attack roll of 1 or 2 that unit gets -1 Strength and -1 Accuracy for its next attack."
+    },
+    "self_destruction" : {
+      "name" : "Self-destruction",
+      "description" : "When a model uses this weapon, it is removed after resolving all attacks.",
+      "points" : -2
+    },
+    "last_word" : {
+      "name" : "Last Word",
+      "description" : "When a model would be killed, before it is removed and if it hasn’t activated yet this turn it may make a free Fight or Shoot action.",
+      "points" : 5
+    },
+    "shield" : {
+      "name" : "Shield",
+      "description" : "This model has +1 Save.",
+      "points" : 2
     }
   }
 }

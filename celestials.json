@@ -1,17 +1,17 @@
 {
-  "name" : "Celestials",
+  "name" : "Celestial Order",
   "id" : "celestials",
   "author" : "Xekon#8266",
   "version" : "0.1",
   "alliance" : "aliens",
   "units" : {
-    "solar_alpha" : {
-      "name" : "Solar Alpha",
+    "battlepriest" : {
+      "name" : "Battlepriest",
       "description" : "",
       "category" : "leader",
       "models" : [
         {
-          "name" : "Solar Alpha",
+          "name" : "Battlepriest",
           "movement" : 6,
           "courage" : 6,
           "shoot" : 5,
@@ -19,35 +19,26 @@
           "defense" : 6,
           "reflexes" : 6,
           "weapons" : [
-            {
-              "id" : "plasma_revolver",
-              "count" : 2
-            },
+            "assault_rifle",
             "celestial_stave",
-            "heavy_ccw"
+            "plasma_grenades"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
-            "leader"
+            "leader",
+            "portal_mastery"
           ],
           "options" : [
             {
-              "addWeapon" : [
-                "smoke_grenades",
-                "plasma_grenades"
+              "replaceWeapon" : [
+                "assault_rifle"
               ],
-              "limit" : 1
-            },
-            {
-              "addRule" : [
-                {
-                  "id" : "power",
-                  "x" : 1
-                },
-                "portal_mastery"
-              ],
-              "limit" : 1
+              "withWeapon" : [
+                "plasma_rifle",
+                "laser_rifle",
+                "beam_rifle"
+              ]
             }
           ]
         }
@@ -63,18 +54,17 @@
           "movement" : 6,
           "courage" : 5,
           "shoot" : 5,
-          "fight" : 5,
+          "fight" : 6,
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
             "heavy_ccw",
-            "plasma_carbine",
-            "revolver"
+            "assault_carbine"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
-            "fearless"
+            "scout"
           ]
         }
       ]
@@ -87,108 +77,53 @@
         {
           "name" : "Squire",
           "movement" : 6,
-          "courage" : 6,
+          "courage" : 5,
           "shoot" : 5,
-          "fight" : 5,
+          "fight" : 6,
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "plasma_revolver",
-              "count" : 2
-            },
-            "heavy_ccw"
+            "energy_ccw",
+            "assault_rifle"
           ],
           "min" : 1,
-          "max" : 1,
-          "rules" : [
-            "fearless"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "heavy_ccw"
-              ],
-              "withWeapon" : [
-                "energy_hammer"
-              ]
-            },
-            {
-              "addWeapon" : [
-                "smoke_grenades",
-                "plasma_grenades"
-              ],
-              "limit" : 1
-            }
-          ]
+          "max" : 1
         }
       ]
     },
     "paladin" : {
       "name" : "Paladin",
       "description" : "",
-      "category" : "heavy",
+      "category" : "specialist",
       "models" : [
         {
           "name" : "Paladin",
           "movement" : 6,
-          "courage" : 6,
-          "shoot" : 6,
+          "courage" : 5,
+          "shoot" : 5,
           "fight" : 6,
-          "defense" : 6,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "celestial_blade",
-            {
-              "id" : "heavy_revolver",
-              "count" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "celestial_blade",
-                {
-                  "id" : "heavy_revolver",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                [
-                  "heavy_ccw",
-                  {
-                    "id" : "celestial_cannon",
-                    "count" : 3
-                  }
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "warden" : {
-      "name" : "Warden",
-      "description" : "",
-      "category" : "specialist",
-      "models" : [
-        {
-          "name" : "Knight",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            "celestial_glaive"
+            "energy_ccw",
+            "assault_rifle"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
-            "furious"
+            "shield_generator"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "assault_rifle"
+              ],
+              "withWeapon" : [
+                "laser_rifle",
+                "plasma_rifle",
+                "beam_rifle"
+              ]
+            }
           ]
         }
       ]
@@ -201,19 +136,29 @@
         {
           "name" : "Knight",
           "movement" : 6,
-          "courage" : 6,
-          "shoot" : 6,
+          "courage" : 5,
+          "shoot" : 5,
           "fight" : 6,
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
             "heavy_ccw",
-            "celestial_chains"
+            "light_machine_gun"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
             "relentless"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "light_machine_gun"
+              ],
+              "withWeapon" : [
+                "heavy_machine_gun"
+              ]
+            }
           ]
         }
       ]
@@ -233,19 +178,120 @@
           "reflexes" : 5,
           "weapons" : [
             "heavy_ccw",
-            {
-              "id" : "plasma_revolver",
-              "count" : 2
-            },
-            "portal_gauntlet"
+            "portal_gauntlet",
+            "plasma_pistol"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
-            "fearless",
+            "ambush",
             "portal_mastery"
           ]
         }
+      ]
+    },
+    "paladin_heavy" : {
+      "name" : "Paladin Heavy",
+      "description" : "",
+      "category" : "heavy",
+      "models" : [
+        {
+          "name" : "Paladin Heavy",
+          "movement" : 6,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "energy_ccw",
+            "light_machine_gun"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "shield_generator"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "light_machine_gun"
+              ],
+              "withWeapon" : [
+                "rocket_pod",
+                "twin_light_machine_gun",
+                "twin_heavy_laser_rifle"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "crusader" : {
+      "name" : "Crusader",
+      "description" : "",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "Crusader",
+          "movement" : 6,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            "assault_rifle",
+            "plasma_grenades",
+            {
+              "id" : "energy_ccw",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "leader",
+            "furious"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "assault_rifle"
+              ],
+              "withWeapon" : [
+                "plasma_rifle",
+                "laser_rifle",
+                "beam_rifle"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "node" : {
+      "name" : "Celestial Node",
+      "description" : "",
+      "category" : "support",
+      "models" : [
+        {
+          "name" : "Celestial Node",
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "portal",
+            "deployable"
+          ],
+          "courage" : "-",
+          "reflexes" : "-",
+          "fight" : "-",
+          "defense" : "-",
+          "shoot" : "-",
+          "movement" : "-"
+        }
+      ],
+      "keywords" : [
+        "Portal"
       ]
     }
   },
@@ -253,7 +299,7 @@
     "celestial_stave" : {
       "name" : "Celestial Stave",
       "attacks" : 1,
-      "ap" : 3,
+      "ap" : 1,
       "short" : "Melee",
       "rules" : [
         "rending",
@@ -262,78 +308,6 @@
           "x" : 1
         }
       ]
-    },
-    "celestial_blade" : {
-      "name" : "Celestial Blade",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee",
-      "rules" : [
-        "lethal"
-      ]
-    },
-    "celestial_chains" : {
-      "name" : "Celestial Chains",
-      "profiles" : [
-        {
-          "name" : "Melee",
-          "attacks" : 3,
-          "ap" : 2,
-          "short" : "Melee",
-          "rules" : [
-            "cumbersome"
-          ]
-        },
-        {
-          "name" : "Throw",
-          "attacks" : 3,
-          "ap" : 2,
-          "short" : 9,
-          "rules" : [
-            "drag"
-          ]
-        }
-      ]
-    },
-    "celestial_glaive" : {
-      "name" : "Celestial Glaive",
-      "profiles" : [
-        {
-          "name" : "Standard",
-          "attacks" : 1,
-          "ap" : 3,
-          "short" : "Melee",
-          "rules" : [
-            "lethal"
-          ]
-        },
-        {
-          "name" : "Overcharge",
-          "attacks" : 1,
-          "ap" : 6,
-          "short" : "Melee",
-          "rules" : [
-            "overheat",
-            "lethal"
-          ]
-        }
-      ],
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
-    },
-    "celestial_cannon" : {
-      "name" : "Celestial Cannon",
-      "attacks" : 1,
-      "ap" : 3,
-      "rules" : [
-        "homing"
-      ],
-      "short" : 9,
-      "medium" : 18
     }
   },
   "rules" : {},

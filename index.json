@@ -57,6 +57,15 @@
       "version" : "0.1",
       "alliance" : "aliens",
       "description" : ""
+    },
+    "starspawn" : {
+      "name" : "Starspawn Syndicate",
+      "id" : "starspawn",
+      "url" : "starspawn.json",
+      "color" : "#008080",
+      "version" : "0.1",
+      "alliance" : "aliens",
+      "description" : ""
     }
   },
   "categories" : {
@@ -197,19 +206,8 @@
     }
   },
   "weapons" : {
-    "heavy_hooves_and_teeth" : {
-      "name" : "Heavy Hooves and Teeth",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1
-    },
-    "hooves_and_teeth" : {
-      "name" : "Hooves and Teeth",
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "light_ccw" : {
-      "name" : "Light CCW",
+    "ccw" : {
+      "name" : "CCW",
       "attacks" : 1,
       "short" : "Melee"
     },
@@ -219,369 +217,141 @@
       "ap" : 1,
       "short" : "Melee"
     },
-    "throwing_knife" : {
-      "name" : "Throwing Knives",
-      "attacks" : 1,
-      "short" : 9,
-      "rules" : [
-        "assault"
-      ]
-    },
     "throwing_axe" : {
       "name" : "Throwing Axe",
       "attacks" : 1,
-      "ap" : 1,
-      "rules" : [
-        "assault"
-      ],
+      "medium" : 9,
       "short" : "Melee",
-      "medium" : 9
-    },
-    "revolver" : {
-      "name" : "Revolver",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "pistol",
-        "rapid_fire"
-      ]
-    },
-    "heavy_revolver" : {
-      "name" : "Heavy Revolver",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "pistol",
-        "rapid_fire"
-      ]
-    },
-    "magnum_revolver" : {
-      "name" : "Magnum Revolver",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "pistol",
-        "rapid_fire",
-        "lethal"
-      ]
-    },
-    "rifle" : {
-      "name" : "Rifle",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : 12,
-      "medium" : 24
-    },
-    "carbine" : {
-      "name" : "Carbine",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
       "rules" : [
         "assault"
       ]
     },
-    "long_rifle" : {
-      "name" : "Long Rifle",
-      "ap" : 1,
+    "pistol" : {
+      "name" : "Pistol",
       "attacks" : 1,
-      "short" : 18,
-      "medium" : 36
-    },
-    "sniper_rifle" : {
-      "name" : "Sniper Rifle",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : 18,
-      "medium" : 36,
+      "short" : 6,
+      "medium" : 12,
       "rules" : [
-        "sniper",
-        "reload"
+        "pistol"
       ]
     },
     "shotgun" : {
       "name" : "Shotgun",
-      "ap" : 2,
       "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
+      "short" : 6,
+      "medium" : 12,
       "rules" : [
-        "assault",
-        "rending"
+        "brutal",
+        "assault"
       ]
     },
     "double_barrel_shotgun" : {
       "name" : "Double Barrel Shotgun",
-      "ap" : 2,
-      "attacks" : 2,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "assault",
-        "rending"
-      ]
-    },
-    "pump_action" : {
-      "name" : "Pump Action Shotgun",
-      "ap" : 2,
       "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "assault",
-        "rending"
-      ]
-    },
-    "shred_rifle" : {
-      "name" : "Shred Rifle",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : 12,
-      "medium" : 24,
-      "rules" : [
-        "crack_shot"
-      ]
-    },
-    "shred_sniper_rifle" : {
-      "name" : "Shred Sniper Rifle",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : 18,
-      "medium" : 36,
-      "rules" : [
-        "crack_shot",
-        "reload",
-        "sniper"
-      ]
-    },
-    "shred_revolver" : {
-      "name" : "Shred Revolver",
-      "ap" : 4,
-      "attacks" : 1,
-      "medium" : 12,
       "short" : 6,
+      "medium" : 12,
       "rules" : [
-        "crack_shot",
-        "pistol",
-        "rapid_fire"
+        "precision",
+        "brutal",
+        "assault"
       ]
     },
-    "long_bow" : {
-      "name" : "Longbow",
+    "plasma_pistol" : {
+      "name" : "Plasma Pistol",
       "attacks" : 1,
       "ap" : 1,
-      "short" : 15,
-      "medium" : 30
-    },
-    "plasma_revolver" : {
-      "name" : "Plasma Revolver",
+      "short" : 6,
+      "medium" : 12,
       "rules" : [
         "pistol",
-        "rapid_fire"
-      ],
-      "profiles" : [
-        {
-          "name" : "Standard",
-          "attacks" : 1,
-          "ap" : 2,
-          "short" : 6,
-          "medium" : 12
-        },
-        {
-          "name" : "Overcharge",
-          "attacks" : 1,
-          "ap" : 3,
-          "short" : 6,
-          "medium" : 12,
-          "rules" : [
-            "overheat"
-          ]
-        }
+        "brutal",
+        "overheat"
       ]
     },
     "plasma_rifle" : {
       "name" : "Plasma Rifle",
-      "profiles" : [
-        {
-          "name" : "Standard",
-          "attacks" : 1,
-          "ap" : 2,
-          "short" : 12,
-          "medium" : 24
-        },
-        {
-          "name" : "Overcharge",
-          "attacks" : 1,
-          "ap" : 3,
-          "short" : 12,
-          "medium" : 24,
-          "rules" : [
-            "overheat"
-          ]
-        }
-      ]
-    },
-    "plasma_carbine" : {
-      "name" : "Plasma Carbine",
-      "rules" : [
-        "assault"
-      ],
-      "profiles" : [
-        {
-          "name" : "Standard",
-          "attacks" : 1,
-          "ap" : 2,
-          "short" : 9,
-          "medium" : 18
-        },
-        {
-          "name" : "Overcharge",
-          "attacks" : 1,
-          "ap" : 3,
-          "short" : 9,
-          "medium" : 18,
-          "rules" : [
-            "overheat"
-          ]
-        }
-      ]
-    },
-    "electric_rifle" : {
-      "name" : "Elecric Rifle",
-      "ap" : 2,
       "attacks" : 1,
+      "ap" : 1,
       "short" : 12,
       "medium" : 24,
       "rules" : [
-        "rending"
+        "overheat",
+        "brutal"
       ]
     },
-    "electric_carbine" : {
-      "name" : "Electric Carbine",
-      "ap" : 2,
+    "plasma_cannon" : {
+      "name" : "Plasma Cannon",
       "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "rending",
-        "assault"
-      ]
-    },
-    "charged_rifle" : {
-      "name" : "Charged Rifle",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : 12,
-      "medium" : 24,
-      "rules" : [
-        "rending"
-      ]
-    },
-    "charged_carbine" : {
-      "name" : "Charged Carbine",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "assault",
-        "rending"
-      ]
-    },
-    "charged_revolver" : {
-      "name" : "Charged Revolver",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "rapid_fire",
-        "pistol",
-        "rending"
-      ]
-    },
-    "charged_sniper_rifle" : {
-      "name" : "Charged Sniper Rifle",
       "ap" : 3,
-      "attacks" : 1,
       "short" : 18,
       "medium" : 36,
       "rules" : [
-        "sniper",
-        "reload",
-        "rending"
+        "overheat",
+        "brutal"
       ]
     },
-    "assault_rifle" : {
-      "name" : "Assault Rifle",
+    "tesla_carbine" : {
+      "name" : "Tesla Carbine",
+      "attacks" : 1,
       "ap" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "lethal",
+        "stun"
+      ]
+    },
+    "tesla_cannon" : {
+      "name" : "Tesla Cannon",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 18,
+      "medium" : 36,
+      "rules" : [
+        "lethal",
+        "stun"
+      ]
+    },
+    "laser_rifle" : {
+      "name" : "Laser Rifle",
       "attacks" : 1,
       "short" : 12,
       "medium" : 24,
       "rules" : [
-        "rapid_fire"
+        "precision"
       ]
     },
-    "assault_carbine" : {
-      "name" : "Assault Carbine",
+    "heavy_machine_gun" : {
+      "name" : "Heavy Machine Gun",
+      "attacks" : 2,
       "ap" : 1,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "assault",
-        "rapid_fire"
-      ]
-    },
-    "assault_long_rifle" : {
-      "name" : "Assault Long Rifle",
-      "ap" : 1,
-      "attacks" : 1,
       "short" : 18,
-      "medium" : 36,
-      "rules" : [
-        "rapid_fire"
-      ]
+      "medium" : 36
     },
-    "shred_carbine" : {
-      "name" : "Shred Carbine",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "assault",
-        "crack_shot"
-      ]
-    },
-    "smoke_grenades" : {
-      "name" : "Smokes",
-      "attacks" : 1,
-      "short" : 6,
-      "rules" : [
-        "grenade",
-        "smoke",
-        "indirect"
-      ]
-    },
-    "frag_grenades" : {
-      "name" : "Frags",
-      "attacks" : 1,
-      "short" : 6,
+    "twin_heavy_machine_gun" : {
+      "name" : "Twin-Linked Heavy Machine Gun",
+      "attacks" : 4,
       "ap" : 1,
+      "short" : 18,
+      "medium" : 36
+    },
+    "heavy_energy_ccw" : {
+      "name" : "Heavy Energy CCW",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
       "rules" : [
-        "grenade",
-        {
-          "id" : "blast",
-          "x" : 3
-        }
+        "lethal"
+      ]
+    },
+    "energy_ccw" : {
+      "name" : "Energy CCW",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
       ]
     },
     "grenade_launcher" : {
@@ -614,153 +384,64 @@
         }
       ]
     },
-    "atomic_pistol" : {
-      "name" : "Atomic Pistol",
-      "ap" : 2,
-      "attacks" : 1,
-      "medium" : 12,
-      "short" : 6,
-      "rules" : [
-        "pistol",
-        "lethal"
-      ]
-    },
-    "energy_hammer" : {
-      "name" : "Energy Hammer",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee",
-      "rules" : [
-        "lethal"
-      ]
-    },
     "flamethrower_gauntlet" : {
       "name" : "Flamethrower Gauntlet",
-      "profiles" : [
-        {
-          "name" : "Melee",
-          "attacks" : 1,
-          "ap" : 1,
-          "short" : "Melee"
-        },
-        {
-          "name" : "Torrent",
-          "attacks" : 3,
-          "ap" : 1,
-          "short" : 6,
-          "rules" : [
-            "flame"
-          ]
-        }
-      ]
-    },
-    "plasma_grenades" : {
-      "name" : "Plasma Grenades",
-      "profiles" : [
-        {
-          "name" : "Standard",
-          "attacks" : 1,
-          "short" : 6,
-          "ap" : 1,
-          "rules" : [
-            "grenade",
-            {
-              "id" : "blast",
-              "x" : 3
-            }
-          ]
-        },
-        {
-          "name" : "Overcharge",
-          "attacks" : 1,
-          "short" : 6,
-          "ap" : 3,
-          "rules" : [
-            "grenade",
-            "lethal",
-            "overheat"
-          ]
-        }
+      "attacks" : 3,
+      "short" : 6,
+      "rules" : [
+        "flame"
       ]
     },
     "portal_gauntlet" : {
       "name" : "Portal Gauntlet",
       "attacks" : 1,
-      "ap" : 3,
-      "short" : "Melee",
-      "rules" : [
-        "lethal",
-        "portal_weapon"
-      ]
-    },
-    "throwing_cards" : {
-      "name" : "Throwing Cards",
-      "attacks" : 1,
       "ap" : 1,
-      "short" : 9,
+      "short" : 6,
       "rules" : [
-        "assault",
-        "rending"
+        "entangle",
+        "stun"
       ]
-    },
-    "bionic_arm" : {
-      "name" : "Bionic Arm",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : "Melee"
     },
     "lasso" : {
       "name" : "Lasso",
       "attacks" : 1,
       "short" : 6,
       "rules" : [
-        "drag"
-      ]
-    },
-    "magnum_peacekeeper" : {
-      "name" : "Magnum Peacekeeper",
-      "ap" : 4,
-      "attacks" : 1,
-      "medium" : 12,
-      "short" : 6,
-      "rules" : [
-        "crack_shot",
-        "pistol",
-        "rapid_fire",
-        {
-          "id" : "deadly",
-          "x" : 2
-        }
-      ]
-    },
-    "gatling_gun" : {
-      "name" : "Gatling Gun",
-      "attacks" : 3,
-      "ap" : 2,
-      "short" : 12,
-      "medium" : 24,
-      "rules" : [
-        "rapid_fire",
-        "reload"
-      ]
-    },
-    "flamethrower" : {
-      "ap" : 1,
-      "attacks" : 5,
-      "medium" : 12,
-      "short" : 6,
-      "name" : "Flamethrower",
-      "rules" : [
-        "flame"
+        "pull",
+        "entangle"
       ]
     },
     "rocket_pod" : {
       "name" : "Rocket Pod",
       "attacks" : 1,
+      "ap" : 6,
       "short" : 12,
       "medium" : 24,
+      "rules" : [
+        "indirect"
+      ]
+    },
+    "rocket_launcher" : {
+      "name" : "Rocket Launcher",
+      "attacks" : 1,
+      "ap" : 6,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        {
+          "id" : "ammo",
+          "x" : 1
+        }
+      ]
+    },
+    "plasma_grenades" : {
+      "name" : "Plasma Grenades",
+      "attacks" : 1,
+      "short" : 6,
       "ap" : 3,
       "rules" : [
+        "grenade",
+        "overheat",
         {
           "id" : "blast",
           "x" : 3
@@ -768,26 +449,255 @@
         "indirect"
       ]
     },
-    "charged_gatling_gun" : {
-      "name" : "Charged Gatling Gun",
-      "attacks" : 3,
+    "frag_grenades" : {
+      "name" : "Frags",
+      "attacks" : 1,
+      "short" : 6,
+      "ap" : 1,
+      "rules" : [
+        "grenade",
+        {
+          "id" : "blast",
+          "x" : 3
+        },
+        "indirect"
+      ]
+    },
+    "smoke_grenades" : {
+      "name" : "Smokes",
+      "attacks" : 1,
+      "short" : 6,
+      "rules" : [
+        "grenade",
+        "smoke",
+        "indirect"
+      ]
+    },
+    "twin_heavy_laser_rifle" : {
+      "name" : "Twin-Linked Heavy Laser Rifle",
+      "attacks" : 2,
+      "short" : 12,
+      "medium" : 24,
+      "ap" : 1,
+      "rules" : [
+        "precision"
+      ]
+    },
+    "heavy_laser_rifle" : {
+      "name" : "Heavy Laser Rifle",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "precision"
+      ]
+    },
+    "heavy_pistol" : {
+      "name" : "Heavy Pistol",
+      "ap" : 1,
+      "attacks" : 1,
+      "medium" : 12,
+      "short" : 6,
+      "rules" : [
+        "pistol"
+      ]
+    },
+    "heavy_rifle" : {
+      "name" : "Heavy Rifle",
+      "ap" : 1,
+      "attacks" : 1,
+      "medium" : 24,
+      "short" : 12
+    },
+    "assault_rifle" : {
+      "name" : "Assault Rifle",
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rapid_fire"
+      ]
+    },
+    "beam_rifle" : {
+      "name" : "Beam Rifle",
+      "attacks" : 1,
       "ap" : 2,
       "short" : 12,
       "medium" : 24,
       "rules" : [
-        "rapid_fire",
-        "reload",
-        "lethal",
-        "rending"
+        "overheat",
+        "precision"
       ]
     },
-    "energy_sabre" : {
-      "name" : "Energy Sabre",
+    "twin_heavy_beam_rifle" : {
+      "name" : "Twin-Linked Heavy Beam Rifle",
+      "attacks" : 2,
+      "ap" : 3,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "overheat",
+        "precision"
+      ]
+    },
+    "heavy_beam_rifle" : {
+      "name" : "Heavy Beam Rifle",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "overheat",
+        "precision"
+      ]
+    },
+    "flashbangs" : {
+      "name" : "Flashbangs",
+      "attacks" : 1,
+      "short" : 6,
+      "rules" : [
+        "grenade",
+        "indirect",
+        "stun"
+      ]
+    },
+    "flamethrower" : {
+      "name" : "Flamethrower",
+      "attacks" : 3,
+      "short" : 6,
+      "medium" : 12,
+      "ap" : 1,
+      "rules" : [
+        "flame"
+      ]
+    },
+    "rifle" : {
+      "name" : "Rifle",
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24
+    },
+    "combat_shotgun" : {
+      "name" : "Combat Shotgun",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        "brutal",
+        "assault"
+      ]
+    },
+    "tesla_rifle" : {
+      "name" : "Tesla Rifle",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "lethal",
+        "stun"
+      ]
+    },
+    "carbine" : {
+      "name" : "Carbine",
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault"
+      ]
+    },
+    "twin_assault_rifle" : {
+      "name" : "Twin Assault Rifle",
+      "attacks" : 2,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rapid_fire"
+      ]
+    },
+    "assault_carbine" : {
+      "name" : "Assault Carbine",
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "rapid_fire"
+      ]
+    },
+    "light_machine_gun" : {
+      "name" : "Light Machine Gun",
+      "attacks" : 2,
+      "short" : 18,
+      "medium" : 36
+    },
+    "twin_light_machine_gun" : {
+      "name" : "Twin-Linked Light Machine Gun",
+      "attacks" : 4,
+      "short" : 18,
+      "medium" : 36
+    },
+    "laser_carbine" : {
+      "name" : "Laser Carbine",
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "precision"
+      ]
+    },
+    "twin_laser_rifle" : {
+      "name" : "Twin-Linked Laser Rifle",
+      "attacks" : 2,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "precision"
+      ]
+    },
+    "twin_laser_carbine" : {
+      "name" : "Twin-Linked Laser Carbine",
+      "attacks" : 2,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "precision"
+      ]
+    },
+    "twin_beam_rifle" : {
+      "name" : "Twin-Linked Beam Rifle",
+      "attacks" : 2,
+      "ap" : 2,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "overheat",
+        "precision"
+      ]
+    },
+    "twin_assault_carbine" : {
+      "name" : "Twin Assault Carbine",
+      "attacks" : 2,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault",
+        "rapid_fire"
+      ]
+    },
+    "sniper_rifle" : {
+      "name" : "Sniper Rifle",
       "attacks" : 1,
       "ap" : 2,
-      "short" : "Melee",
+      "short" : 12,
+      "medium" : 24,
       "rules" : [
-        "lethal"
+        "sniper"
       ]
     }
   },
@@ -802,15 +712,15 @@
       "description" : "This model gains +1 Courage.",
       "points" : 10
     },
-    "mount_horse" : {
-      "name" : "Horse",
-      "description" : "This model has +2\" Movement.",
+    "pull" : {
+      "name" : "Pull",
+      "description" : "When this weapon hits an enemy model, the enemy model is moved d5” towards this model. Models in the target unit cannot be Embarked, moved out of the Play Area or into Impassable terrain.",
       "points" : 2
     },
-    "drag" : {
-      "name" : "Drag",
-      "description" : "When this weapon hits an enemy model, the enemy model is moved d5” towards this model. Models in the target unit cannot be Embarked, dragged out of the Play Area or into Impassable terrain.",
-      "points" : 5
+    "push" : {
+      "name" : "Push",
+      "description" : "When an enemy model in a unit is hit by this weapon, the enemy model scatters d5”. Models in the unit cannot be placed out of the Play Area, into Impassable terrain or within a building or model with _Transport_. Models within a building or within a model with _Transport_ cannot be Pushed.",
+      "points" : 2
     },
     "homing" : {
       "name" : "Homing",
@@ -821,77 +731,68 @@
     },
     "portal_mastery" : {
       "name" : "Portal Mastery",
-      "description" : "At any point during this unit's activation you can roll a die and on an 5 or less deploy a friendly _Portal_ unit in reserves within 3“ of this model, then scatter the _Portal_ model d5“ into a random direction. At any point during this unit's activation, if within 3\" of a _Portal_ unit, roll one die. On an 5 or less move the portal 3“ or put it into it’s owner’s reserves and replace it with a friendly _Portal_ model from your reserves, then scatter the _Portal_ model d5“ into a random direction.",
-      "points" : 10
+      "description" : "At any point during this unit's activation you can roll a die and on an 5 or less deploy a friendly _Portal_ model in reserves within 3“ of this model, then scatter the _Portal_ model d5“ into a random direction. At any point during this unit's activation, if within 3\" of a _Portal_ model, roll one die. On an 5 or less move the portal 3“ or put it into it’s owner’s reserves and replace it with a friendly _Portal_ model from your reserves, then scatter the _Portal_ model d5“ into a random direction.",
+      "points" : 5
     },
     "portal_weapon" : {
       "name" : "Portal Weapon",
-      "description" : "At any point during this unit's activation, if within 3\" of a _Portal_ unit, roll one die. On an 5 or less move the portal 3“ or put it into it’s owner’s reserves and replace it with a friendly _Portal_ model from your reserves, then scatter the _Portal_ model d5“ into a random direction.",
-      "points" : 5
+      "description" : "At any point during this unit's activation, if within 3\" of a _Portal_ model, roll one die. On an 5 or less move the portal 3“ or put it into it’s owner’s reserves and replace it with a friendly _Portal_ model from your reserves, then scatter the _Portal_ model d5“ into a random direction.",
+      "points" : 2
     },
     "shield_generator" : {
       "name" : "Shield Generator",
       "description" : "This and all friendly units within 6\" have +1 Save.",
       "points" : 10
     },
-    "deadeye" : {
-      "name" : "Deadeye",
-      "description" : "This model may ignore the Long Range penalty. You may choose which model is hit even if it has Leader and these hits may not be reassigned to other friendly units.",
-      "points" : 2
-    },
-    "linked" : {
-      "name" : "Linked",
+    "precision" : {
+      "name" : "Precision",
       "description" : "Re-roll failed hit rolls of 9+ when attacking with this weapon.",
-      "points" : 2
-    },
-    "push" : {
-      "name" : "Push",
-      "description" : "When an enemy model in a unit is hit by this weapon, the enemy model scatters d5”. Models in the unit cannot be placed out of the Play Area, into Impassable terrain or within a building or model with _Transport_. Models within a building or within a model with _Transport_ cannot be Pushed.",
-      "points" : 5
-    },
-    "hazardous" : {
-      "name" : "Hazardous",
-      "description" : "Models hit by this weapon cannot make reactions until the end of their activation and take a single AP0 hit at the end of their activation.",
-      "points" : 5
-    },
-    "drag_crit" : {
-      "name" : "Drag (Critical)",
-      "description" : "When this weapon hits an enemy model with an attack roll of 1 or 2, the enemy model is moved d5” towards this model. Models in the target unit cannot be Embarked, dragged out of the Play Area or into Impassable terrain.",
-      "points" : 2
-    },
-    "push_crit" : {
-      "name" : "Push (Critical)",
-      "description" : "When an enemy model in a unit is hit by this weapon with an attack roll of 1 or 2, the enemy model scatters d5”. Models in the unit cannot be placed out of the Play Area, into Impassable terrain or within a building or model with _Transport_. Models within a building or within a model with _Transport_ cannot be Pushed.",
-      "points" : 2
-    },
-    "hazardous_crit" : {
-      "name" : "Hazardous (Critical)",
-      "description" : "Models hit by this weapon by an attack roll of 1 or 2 cannot make reactions until the end of their activation and take a single AP0 hit at the end of their activation.",
       "points" : 2
     },
     "stun" : {
       "name" : "Stun",
       "description" : "If this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack.",
-      "points" : 1
-    },
-    "stun_crit" : {
-      "name" : "Stun (Critical)",
-      "description" : "If this weapon hits its target, on an attack roll of 1 or 2 that unit gets -1 Strength and -1 Accuracy for its next attack."
+      "points" : 2
     },
     "self_destruction" : {
       "name" : "Self-destruction",
       "description" : "When a model uses this weapon, it is removed after resolving all attacks.",
-      "points" : -2
+      "points" : [
+        "weapon.attacks",
+        {
+          "multiply" : -1
+        }
+      ]
     },
     "last_word" : {
       "name" : "Last Word",
-      "description" : "When a model would be killed, before it is removed and if it hasn’t activated yet this turn it may make a free Fight or Shoot action.",
+      "description" : "When a model from this unit would be killed, before the model is removed and if the unit hasn’t activated yet this turn it may make a Fight or Shoot action.",
       "points" : 5
     },
-    "shield" : {
-      "name" : "Shield",
-      "description" : "This model has +1 Save.",
+    "parry" : {
+      "name" : "Parry",
+      "description" : "This model has +1 Save against melee attacks.",
+      "points" : 1
+    },
+    "tough" : {
+      "name" : "Tough",
+      "description" : "This model may ignore the first point of AP from attacks. Weapons with AP 4 or greater ignore this rule.",
       "points" : 2
+    },
+    "entangle" : {
+      "name" : "Entangle",
+      "description" : "Units hit by this weapon lose 2\" from their next move.",
+      "points" : 1
+    },
+    "insignificant" : {
+      "name" : "Insignificant",
+      "description" : "This model may not be used to control or contest objectives.",
+      "points" : -5
+    },
+    "portal" : {
+      "name" : "Portal",
+      "description" : "Friendly units may deploy within 3“ of this model and not within 9“ of any enemy models instead of deploying normally. Friendly units may enter this Portal if they’re within 3“ of this model at the end of a movement action, placing the models within 3“ of another friendly _Portal_ model and not within 9“ of any enemy models.",
+      "points" : 15
     }
   }
 }

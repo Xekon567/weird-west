@@ -15,32 +15,55 @@
           "movement" : 5,
           "courage" : 6,
           "shoot" : 5,
-          "fight" : 6,
-          "defense" : 6,
+          "fight" : 5,
+          "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "bionic_arm",
-            "energy_sabre",
+            "energy_ccw",
             "smoke_grenades",
-            "atomic_pistol"
+            "assault_carbine"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
             "leader",
-            "scout",
             "evasive"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "bionic_arm",
-                "atomic_pistol"
+                "assault_carbine"
               ],
               "withWeapon" : [
-                "magnum_peacekeeper"
+                "laser_carbine",
+                "plasma_shotgun"
               ]
             }
+          ]
+        }
+      ]
+    },
+    "rebel_sniper" : {
+      "name" : "Rebel Sniper",
+      "description" : "",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Rebel Sniper",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "sniper_rifle",
+            "throwing_axe"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "evasive"
           ]
         }
       ]
@@ -54,49 +77,29 @@
           "name" : "Rebel Scout",
           "movement" : 6,
           "courage" : 5,
-          "shoot" : 4,
+          "shoot" : 5,
           "fight" : 5,
-          "defense" : 4,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
             "throwing_axe",
-            {
-              "id" : "heavy_revolver",
-              "count" : 2
-            }
+            "carbine"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
             "evasive",
             "scout"
-          ]
-        }
-      ]
-    },
-    "rebel_sniper" : {
-      "name" : "Rebel Sniper",
-      "description" : "",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Rebel Sniper",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            "light_ccw",
-            "heavy_revolver",
-            "plasma_rifle"
           ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            "evasive",
-            "deadeye"
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "carbine"
+              ],
+              "withWeapon" : [
+                "laser_carbine"
+              ]
+            }
           ]
         }
       ]
@@ -115,42 +118,25 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "energy_sabre",
-            "carbine",
-            {
-              "id" : "revolver",
-              "count" : 2
-            }
+            "energy_ccw",
+            "assault_rifle"
           ],
           "min" : 1,
           "max" : 1,
           "options" : [
             {
               "replaceWeapon" : [
-                "carbine",
-                {
-                  "id" : "revolver",
-                  "count" : 2
-                }
+                "assault_rifle"
               ],
               "withWeapon" : [
-                [
-                  "shred_carbine",
-                  "heavy_revolver"
-                ],
-                [
-                  "revolver",
-                  "energy_sabre"
-                ],
-                [
-                  "atomic_pistol",
-                  "lasso"
-                ]
+                "laser_rifle",
+                "plasma_shotgun"
               ]
             }
           ],
           "rules" : [
-            "evasive"
+            "evasive",
+            "support"
           ]
         }
       ]
@@ -162,7 +148,7 @@
       "models" : [
         {
           "name" : "Robot Hound",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -192,7 +178,7 @@
       "models" : [
         {
           "name" : "Gun Hound",
-          "movement" : 6,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 5,
           "fight" : 4,
@@ -213,8 +199,9 @@
                 "flamethrower"
               ],
               "withWeapon" : [
-                "charged_gatling_gun",
-                "rocket_pod"
+                "heavy_machine_gun",
+                "rocket_pod",
+                "twin_heavy_laser_rifle"
               ]
             }
           ]
@@ -239,10 +226,32 @@
           "reflexes" : 5,
           "weapons" : [
             "heavy_ccw",
-            "gatling_shotguns"
+            {
+              "id" : "light_machine_gun",
+              "count" : 2
+            }
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "light_machine_gun"
+              ],
+              "withWeapon" : [
+                "rocket_pod",
+                "plasma_cannon",
+                "heavy_machine_gun"
+              ],
+              "modelLimit" : 2
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ]
         }
       ]
     },
@@ -260,58 +269,9 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "energy_sabre",
-            "charged_rifle",
-            "charged_revolver",
-            "smoke_grenades"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            "evasive",
-            "deadeye",
-            "scout"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "charged_rifle",
-                "charged_revolver"
-              ],
-              "withWeapon" : [
-                "flamethrower",
-                {
-                  "id" : "atomic_pistol",
-                  "count" : 2
-                },
-                "double_barrel_shotgun",
-                "explosive_crossbow"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "rebel_scout_heavy" : {
-      "name" : "Rebel Scout Heavy",
-      "description" : "",
-      "category" : "heavy",
-      "models" : [
-        {
-          "name" : "Rebel Scout Heavy",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            "throwing_axe",
-            {
-              "id" : "heavy_revolver",
-              "count" : 2
-            },
-            "plasma_grenades"
+            "smoke_grenades",
+            "energy_ccw",
+            "assault_carbine"
           ],
           "min" : 1,
           "max" : 1,
@@ -321,21 +281,10 @@
           "options" : [
             {
               "replaceWeapon" : [
-                {
-                  "id" : "heavy_revolver",
-                  "count" : 2
-                }
+                "assault_carbine"
               ],
               "withWeapon" : [
-                {
-                  "id" : "electric_carbine",
-                  "count" : 2
-                },
-                "charged_gatling_gun",
-                "rocket_pod",
-                "charged_sniper_rifle",
-                "flamethrower",
-                "double_barrel_shotgun",
+                "explosive_crossbow",
                 "plasma_shotgun"
               ]
             }
@@ -343,46 +292,38 @@
         }
       ]
     },
-    "rebel_sniper_heavy" : {
-      "name" : "Rebel Sniper Heavy",
+    "rebel_heavy" : {
+      "name" : "Rebel Heavy",
       "description" : "",
       "category" : "heavy",
       "models" : [
         {
-          "name" : "Rebel Sniper",
+          "name" : "Rebel Heavy",
           "movement" : 6,
           "courage" : 5,
           "shoot" : 5,
-          "fight" : 4,
+          "fight" : 5,
           "defense" : 4,
           "reflexes" : 5,
           "weapons" : [
-            "light_ccw",
-            "heavy_revolver",
-            "plasma_rifle",
-            "plasma_grenades"
+            "throwing_axe",
+            "plasma_grenades",
+            "assault_carbine"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
-            "evasive",
-            "deadeye"
+            "evasive"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "plasma_rifle"
+                "assault_carbine"
               ],
               "withWeapon" : [
-                {
-                  "id" : "electric_carbine",
-                  "count" : 2
-                },
-                "charged_gatling_gun",
-                "rocket_pod",
-                "charged_sniper_rifle",
+                "light_machine_gun",
+                "sniper_rifle",
                 "flamethrower",
-                "double_barrel_shotgun",
                 "plasma_shotgun"
               ]
             }
@@ -400,124 +341,130 @@
           "movement" : 8,
           "courage" : 6,
           "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
+          "fight" : 5,
+          "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "bionic_arm",
-            {
-              "id" : "electric_carbine",
-              "count" : 2
-            },
-            {
-              "id" : "heavy_revolver",
-              "count" : 2
-            }
+            "heavy_ccw",
+            "assault_carbine",
+            "twin_assault_rifle"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
-            "leader",
-            "scout",
             {
               "id" : "impact",
               "x" : 1
+            },
+            "evasive",
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Biker"
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "assault_carbine"
+              ],
+              "withWeapon" : [
+                "laser_carbine",
+                "plasma_shotgun"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "twin_assault_rifle"
+              ],
+              "withWeapon" : [
+                "twin_light_machine_gun"
+              ]
             }
           ]
         }
+      ],
+      "keywords" : [
+        "Biker"
       ]
     },
-    "corporal" : {
-      "name" : "Corporal",
+    "rebel_bike" : {
+      "name" : "Rebel on Hoverbike",
       "description" : "",
-      "category" : "heavy",
+      "category" : "support",
       "models" : [
         {
-          "name" : "Coporal",
-          "movement" : 6,
+          "name" : "Rebel on Hoverbike",
+          "movement" : 8,
           "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "energy_sabre",
-            "grenade_launcher"
+            "throwing_axe",
+            "carbine",
+            "twin_assault_rifle"
           ],
           "min" : 1,
           "max" : 1,
+          "rules" : [
+            "evasive",
+            "scout",
+            {
+              "id" : "impact",
+              "x" : 1
+            }
+          ],
           "options" : [
             {
               "replaceWeapon" : [
-                "grenade_launcher"
+                "carbine"
               ],
               "withWeapon" : [
-                "gatling_gun",
-                "sniper_rifle"
+                "laser_carbine"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "twin_assault_rifle"
+              ],
+              "withWeapon" : [
+                "twin_light_machine_gun"
               ]
             }
-          ],
-          "rules" : [
-            "evasive"
           ]
         }
+      ],
+      "keywords" : [
+        "Biker"
       ]
     }
   },
   "weapons" : {
-    "gatling_shotguns" : {
-      "name" : "Gatling Shotguns",
-      "ap" : 3,
-      "attacks" : 3,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "assault",
-        "lethal",
-        "reload",
-        "flame"
-      ]
-    },
     "plasma_shotgun" : {
       "name" : "Plasma Shotgun",
-      "profiles" : [
-        {
-          "name" : "Standard",
-          "attacks" : 1,
-          "short" : 9,
-          "ap" : 2,
-          "rules" : [
-            "assault",
-            "rending"
-          ],
-          "medium" : 18
-        },
-        {
-          "name" : "Overcharge",
-          "attacks" : 1,
-          "short" : 9,
-          "ap" : 3,
-          "rules" : [
-            "assault",
-            "lethal",
-            "overheat"
-          ],
-          "medium" : 18
-        }
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        "assault",
+        "overheat",
+        "brutal"
       ]
     },
     "explosive_crossbow" : {
       "name" : "Explosive Crossbow",
       "ap" : 3,
       "attacks" : 1,
-      "medium" : 18,
-      "short" : 9,
+      "medium" : 12,
+      "short" : 6,
       "rules" : [
+        "assault",
         {
-          "id" : "blast",
+          "id" : "ammo",
           "x" : 3
-        },
-        "assault"
+        }
       ]
     }
   },
@@ -525,5 +472,5 @@
   "powers" : {},
   "strategies" : [],
   "relics" : [],
-  "color" : "#954535"
+  "color" : "#B53737"
 }

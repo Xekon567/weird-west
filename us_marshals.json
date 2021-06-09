@@ -8,7 +8,7 @@
   "units" : {
     "marshal" : {
       "name" : "US Marshal",
-      "description" : "A United States marshal, bringing justice to the frontier.",
+      "description" : "A United States marshal, scrambling to enforce the law in the wastelands.",
       "category" : "leader",
       "models" : [
         {
@@ -20,12 +20,9 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            {
-              "id" : "plasma_revolver",
-              "count" : 2
-            },
-            "stun_baton",
-            "frag_grenades"
+            "heavy_ccw",
+            "frag_grenades",
+            "rifle"
           ],
           "min" : 1,
           "max" : 1,
@@ -35,31 +32,50 @@
           "options" : [
             {
               "replaceWeapon" : [
-                {
-                  "id" : "plasma_revolver",
-                  "count" : 2
-                }
+                "rifle"
               ],
               "withWeapon" : [
-                [
-                  "shotgun",
-                  "revolver"
-                ],
-                [
-                  "electric_carbine",
-                  "charged_revolver"
-                ],
-                "magnum_peacekeeper"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "frag_grenades"
-              ],
-              "withWeapon" : [
-                "smoke_grenades"
+                "combat_shotgun",
+                "assault_rifle"
               ]
             }
+          ]
+        }
+      ]
+    },
+    "sheriff" : {
+      "name" : "Sheriff",
+      "description" : "A local peace-keeper, trained to take down fearsome criminals",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "Sheriff",
+          "movement" : 6,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "heavy_ccw",
+            "carbine"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "carbine"
+              ],
+              "withWeapon" : [
+                "combat_shotgun",
+                "assault_carbine"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "leader",
+            "scout"
           ]
         }
       ]
@@ -67,7 +83,7 @@
     "deputy" : {
       "name" : "US Deputy",
       "description" : "A United States deputy, bringing justice to the frontier.",
-      "category" : "core",
+      "category" : "specialist",
       "models" : [
         {
           "name" : "US Deputy",
@@ -79,21 +95,16 @@
           "reflexes" : 5,
           "weapons" : [
             "heavy_ccw",
-            {
-              "id" : "revolver",
-              "count" : 2
-            }
+            "rifle",
+            "plasma_pistol"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                {
-                  "id" : "revolver",
-                  "count" : 1
-                }
+                "rifle"
               ],
               "withWeapon" : [
-                "rifle"
+                "combat_shotgun"
               ]
             }
           ],
@@ -116,11 +127,24 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "charged_carbine",
-            "stun_baton"
+            "carbine",
+            "heavy_ccw"
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "rules" : [
+            "scout"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "carbine"
+              ],
+              "withWeapon" : [
+                "combat_shotgun"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -138,237 +162,14 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "stun_baton",
+            "heavy_ccw",
             {
-              "id" : "charged_revolver",
+              "id" : "pistol",
               "count" : 2
             }
           ],
           "min" : 1,
           "max" : 1
-        }
-      ]
-    },
-    "bounty_hunter" : {
-      "name" : "Bounty Hunter",
-      "description" : "A mercenary, hunting down wanted criminals.",
-      "category" : "specialist",
-      "models" : [
-        {
-          "name" : "Bounty Hunter",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "stun_baton",
-            {
-              "id" : "charged_revolver",
-              "count" : 2
-            },
-            "frag_grenades"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "charged_revolver",
-                  "count" : 1
-                }
-              ],
-              "withWeapon" : [
-                "charged_rifle",
-                "shred_carbine",
-                "flamethrower_gauntlet"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "charged_revolver",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  "grenade_launcher"
-                ],
-                {
-                  "id" : "plasma_revolver",
-                  "count" : 2
-                },
-                "shred_revolver"
-              ]
-            },
-            {
-              "addWeapon" : [
-                "lasso"
-              ]
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "sheriff" : {
-      "name" : "Sheriff",
-      "description" : "A local peace-keeper, trained to take down fearsome criminals",
-      "category" : "leader",
-      "models" : [
-        {
-          "name" : "Sheriff",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            "stun_baton",
-            "lasso",
-            {
-              "id" : "charged_revolver",
-              "count" : 2
-            },
-            "frag_grenades"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "charged_revolver",
-                  "count" : 1
-                }
-              ],
-              "withWeapon" : [
-                "charged_rifle",
-                "plasma_revolver"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "charged_revolver",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "plasma_revolver",
-                  "count" : 2
-                }
-              ]
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            "leader"
-          ]
-        }
-      ]
-    },
-    "trickster" : {
-      "name" : "Trickster",
-      "description" : "A mercenary who evades enemy attacks.",
-      "category" : "specialist",
-      "models" : [
-        {
-          "name" : "Trickster",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "bionic_arm",
-            {
-              "id" : "revolver",
-              "count" : 2
-            },
-            {
-              "id" : "throwing_cards",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "revolver",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "atomic_pistol",
-                  "count" : 2
-                }
-              ]
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            "evasive"
-          ]
-        }
-      ]
-    },
-    "judge_terminator" : {
-      "name" : "Judge Terminator",
-      "description" : "A heavily-armored judge, jury and executioner.",
-      "category" : "leader",
-      "models" : [
-        {
-          "name" : "Judge Terminator",
-          "movement" : 5,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            "bionic_arm",
-            "revolver",
-            {
-              "id" : "energy_hammer",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            "leader"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "revolver"
-              ],
-              "withWeapon" : [
-                "gatling_gun"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "energy_hammer",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "jet_hammer",
-                  "count" : 2
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -379,7 +180,7 @@
       "models" : [
         {
           "name" : "Robot Hound",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -409,7 +210,7 @@
       "models" : [
         {
           "name" : "Gun Hound",
-          "movement" : 6,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 5,
           "fight" : 4,
@@ -430,8 +231,9 @@
                 "flamethrower"
               ],
               "withWeapon" : [
-                "liberty_gatling_gun",
-                "rocket_pod"
+                "heavy_machine_gun",
+                "rocket_pod",
+                "twin_heavy_laser_rifle"
               ]
             }
           ]
@@ -440,38 +242,140 @@
       "keywords" : [
         "Automaton"
       ]
-    }
-  },
-  "weapons" : {
-    "stun_baton" : {
-      "name" : "Stun Baton",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : "Melee",
-      "rules" : [
-        "rending"
+    },
+    "marshal_bike" : {
+      "name" : "US Marshal on Hoverbike",
+      "description" : "A United States marshal, driving a hoverbike to bring justice to the frontier.",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "US Marshal on Hoverbike",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "heavy_ccw",
+            "twin_assault_rifle",
+            "rifle"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "leader",
+            {
+              "id" : "impact",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "rifle"
+              ],
+              "withWeapon" : [
+                "combat_shotgun"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "twin_assault_rifle"
+              ],
+              "withWeapon" : [
+                "twin_light_machine_gun"
+              ]
+            }
+          ]
+        }
       ]
     },
-    "jet_hammer" : {
-      "name" : "Jet Hammer",
-      "attacks" : 1,
-      "ap" : 4,
-      "short" : "Melee"
+    "deputy_bike" : {
+      "name" : "US Deputy on Hoverbike",
+      "description" : "A United States deputy, driving a hoverbike to bring justice to the frontier.",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "US Deputy on Hoverbike",
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "heavy_ccw",
+            "rifle",
+            "twin_assault_rifle",
+            "plasma_pistol"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "rifle"
+              ],
+              "withWeapon" : [
+                "combat_shotgun"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "twin_assault_rifle"
+              ],
+              "withWeapon" : [
+                "twin_light_machine_gun"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "impact",
+              "x" : 1
+            }
+          ]
+        }
+      ]
     },
-    "liberty_gatling_gun" : {
-      "name" : "Liberty Gatling Gun",
-      "attacks" : 3,
-      "ap" : 2,
-      "short" : 12,
-      "medium" : 24,
-      "rules" : [
-        "rapid_fire",
-        "reload",
-        "lethal",
-        "crack_shot"
+    "deputy_heavy" : {
+      "name" : "US Deputy Heavy",
+      "description" : "A United States deputy, equipped with different weapons.",
+      "category" : "heavy",
+      "models" : [
+        {
+          "name" : "US Deputy Heavy",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "heavy_ccw",
+            "rifle",
+            "plasma_pistol"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "rifle"
+              ],
+              "withWeapon" : [
+                "heavy_laser_rifle",
+                "plasma_cannon",
+                "flamethrower"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
       ]
     }
   },
+  "weapons" : {},
   "rules" : {},
   "powers" : {},
   "strategies" : [],

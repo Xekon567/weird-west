@@ -5,9 +5,9 @@
   "version" : "0.1",
   "alliance" : "outlaws",
   "units" : {
-    "gang_boss" : {
+    "boss" : {
       "name" : "Boss",
-      "description" : "A ruthless leader of a mercenary posse.",
+      "description" : "A fortune seeker, leading a small gang of outlaws.",
       "category" : "leader",
       "models" : [
         {
@@ -15,13 +15,13 @@
           "movement" : 6,
           "courage" : 6,
           "shoot" : 5,
-          "fight" : 6,
+          "fight" : 5,
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "bionic_arm",
+            "pistol",
             {
-              "id" : "charged_revolver",
+              "id" : "heavy_ccw",
               "count" : 2
             }
           ],
@@ -33,21 +33,10 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "charged_revolver"
+                "pistol"
               ],
               "withWeapon" : [
-                "plasma_revolver",
-                "shred_revolver"
-              ],
-              "modelLimit" : 2
-            },
-            {
-              "replaceWeapon" : [
-                "charged_revolver"
-              ],
-              "withWeapon" : [
-                "shotgun",
-                "double_barrel_shotgun"
+                "assault_carbine"
               ]
             }
           ]
@@ -65,22 +54,22 @@
           "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 4,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "light_ccw",
+            "pistol",
             {
-              "id" : "revolver",
+              "id" : "ccw",
               "count" : 2
             }
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "revolver"
+                "pistol"
               ],
               "withWeapon" : [
-                "rifle"
+                "assault_carbine"
               ]
             }
           ],
@@ -100,24 +89,19 @@
           "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 4,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "light_ccw",
-            "charged_revolver",
-            "charged_carbine"
+            "heavy_ccw",
+            "assault_rifle"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "charged_carbine",
-                "light_ccw"
+                "assault_rifle"
               ],
               "withWeapon" : [
-                [
-                  "charged_revolver",
-                  "heavy_ccw"
-                ]
+                "combat_shotgun"
               ]
             }
           ],
@@ -140,30 +124,11 @@
           "defense" : 4,
           "reflexes" : 5,
           "weapons" : [
-            "light_ccw",
-            "sniper_rifle",
-            "charged_revolver"
+            "ccw",
+            "sniper_rifle"
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "sniper_rifle",
-                "light_ccw"
-              ],
-              "withWeapon" : [
-                [
-                  "shred_carbine",
-                  "heavy_ccw"
-                ],
-                [
-                  "charged_sniper_rifle",
-                  "bionic_arm"
-                ]
-              ]
-            }
-          ]
+          "max" : 1
         }
       ]
     },
@@ -178,86 +143,17 @@
           "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 4,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "light_ccw",
+            "ccw",
             {
-              "id" : "charged_revolver",
+              "id" : "heavy_pistol",
               "count" : 2
             }
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "charged_revolver",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                "shred_revolver",
-                {
-                  "id" : "atomic_pistol",
-                  "count" : 2
-                },
-                {
-                  "id" : "plasma_revolver",
-                  "count" : 2
-                }
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "light_ccw"
-              ],
-              "withWeapon" : [
-                "heavy_ccw"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "engineer" : {
-      "name" : "Engineer",
-      "description" : "",
-      "category" : "specialist",
-      "models" : [
-        {
-          "name" : "Engineer",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            "light_ccw",
-            {
-              "id" : "plasma_revolver",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "plasma_revolver",
-                  "count" : 1
-                }
-              ],
-              "withWeapon" : [
-                "grenade_launcher",
-                "energy_hammer",
-                "flamethrower_gauntlet"
-              ]
-            }
-          ]
+          "max" : 1
         }
       ]
     },
@@ -268,7 +164,7 @@
       "models" : [
         {
           "name" : "Robot Hound",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -298,7 +194,7 @@
       "models" : [
         {
           "name" : "Gun Hound",
-          "movement" : 6,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 5,
           "fight" : 4,
@@ -319,8 +215,9 @@
                 "flamethrower"
               ],
               "withWeapon" : [
-                "charged_gatling_gun",
-                "rocket_pod"
+                "heavy_machine_gun",
+                "rocket_pod",
+                "twin_heavy_laser_rifle"
               ]
             }
           ]
@@ -328,6 +225,57 @@
       ],
       "keywords" : [
         "Automaton"
+      ]
+    },
+    "boss_bike" : {
+      "name" : "Boss on Hoverbike",
+      "description" : "A fortune seeker, leading a small gang of outlaws.",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "Boss",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "pistol",
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            },
+            "twin_assault_rifle"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "leader",
+            {
+              "id" : "impact",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "assault_carbine"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "twin_assault_rifle"
+              ],
+              "withWeapon" : [
+                "twin_light_machine_gun"
+              ]
+            }
+          ]
+        }
       ]
     }
   },

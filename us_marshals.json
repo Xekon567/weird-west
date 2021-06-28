@@ -20,9 +20,9 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "heavy_ccw",
-            "frag_grenades",
-            "rifle"
+            "rifle",
+            "ccw",
+            "frag_grenades"
           ],
           "min" : 1,
           "max" : 1,
@@ -35,8 +35,32 @@
                 "rifle"
               ],
               "withWeapon" : [
-                "combat_shotgun",
-                "assault_rifle"
+                "shotgun",
+                "sniper_rifle",
+                "plasma_rifle"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "rifle",
+                "ccw"
+              ],
+              "withWeapon" : [
+                [
+                  "pistol",
+                  {
+                    "id" : "ccw",
+                    "count" : 2
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "plasma_pistol"
               ]
             }
           ]
@@ -57,25 +81,96 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "heavy_ccw",
-            "carbine"
-          ],
-          "options" : [
+            "frag_grenades",
             {
-              "replaceWeapon" : [
-                "carbine"
-              ],
-              "withWeapon" : [
-                "combat_shotgun",
-                "assault_carbine"
-              ]
-            }
+              "id" : "ccw",
+              "count" : 2
+            },
+            "pistol"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
             "leader",
             "scout"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "plasma_pistol"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "pistol",
+                {
+                  "id" : "ccw",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  "rifle",
+                  "ccw"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "marshal_bike" : {
+      "name" : "US Marshal on Hoverbike",
+      "description" : "A United States marshal, driving a hoverbike to bring justice to the frontier.",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "US Marshal on Hoverbike",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "ccw",
+            "light_machine_gun",
+            "rifle",
+            "frag_grenades"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "leader",
+            {
+              "id" : "impact",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "rifle"
+              ],
+              "withWeapon" : [
+                "shotgun",
+                "sniper_rifle",
+                "plasma_rifle"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "light_machine_gun"
+              ],
+              "withWeapon" : [
+                "heavy_machine_gun",
+                "flamethrower",
+                "rocket_launcher"
+              ]
+            }
           ]
         }
       ]
@@ -90,13 +185,72 @@
           "movement" : 6,
           "courage" : 5,
           "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
+          "fight" : 6,
+          "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "heavy_ccw",
+            "ccw",
             "rifle",
-            "plasma_pistol"
+            "frag_grenades"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "rifle"
+              ],
+              "withWeapon" : [
+                "fusion_rifle",
+                "plasma_rifle",
+                "flamethrower"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "rifle",
+                "ccw"
+              ],
+              "withWeapon" : [
+                [
+                  "pistol",
+                  {
+                    "id" : "ccw",
+                    "count" : 2
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "plasma_pistol"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "deputy_bike" : {
+      "name" : "US Deputy on Hoverbike",
+      "description" : "A United States deputy, driving a hoverbike to bring justice to the frontier.",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "US Deputy on Hoverbike",
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "ccw",
+            "rifle",
+            "light_machine_gun",
+            "frag_grenades"
           ],
           "options" : [
             {
@@ -104,12 +258,53 @@
                 "rifle"
               ],
               "withWeapon" : [
-                "combat_shotgun"
+                "fusion_rifle",
+                "plasma_rifle",
+                "flamethrower"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "rifle",
+                "ccw"
+              ],
+              "withWeapon" : [
+                [
+                  "pistol",
+                  {
+                    "id" : "ccw",
+                    "count" : 2
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "plasma_pistol"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "light_machine_gun"
+              ],
+              "withWeapon" : [
+                "heavy_machine_gun",
+                "flamethrower",
+                "rocket_launcher"
               ]
             }
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "impact",
+              "x" : 1
+            }
+          ]
         }
       ]
     },
@@ -127,8 +322,11 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "carbine",
-            "heavy_ccw"
+            "pistol",
+            {
+              "id" : "ccw",
+              "count" : 2
+            }
           ],
           "min" : 1,
           "max" : 1,
@@ -138,10 +336,11 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "carbine"
+                "pistol"
               ],
               "withWeapon" : [
-                "combat_shotgun"
+                "plasma_pistol",
+                "carbine"
               ]
             }
           ]
@@ -162,14 +361,26 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "heavy_ccw",
-            {
-              "id" : "pistol",
-              "count" : 2
-            }
+            "ccw",
+            "heavy_rifle"
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "heavy_rifle"
+              ],
+              "withWeapon" : [
+                "shotgun",
+                "plasma_rifle",
+                {
+                  "id" : "heavy_pistol",
+                  "count" : 2
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -221,19 +432,19 @@
               "id" : "heavy_ccw",
               "count" : 2
             },
-            "flamethrower"
+            "light_machine_gun"
           ],
           "min" : 1,
           "max" : 1,
           "options" : [
             {
               "replaceWeapon" : [
-                "flamethrower"
+                "light_machine_gun"
               ],
               "withWeapon" : [
                 "heavy_machine_gun",
-                "rocket_pod",
-                "twin_heavy_laser_rifle"
+                "rocket_launcher",
+                "flamethrower"
               ]
             }
           ]
@@ -241,102 +452,6 @@
       ],
       "keywords" : [
         "Automaton"
-      ]
-    },
-    "marshal_bike" : {
-      "name" : "US Marshal on Hoverbike",
-      "description" : "A United States marshal, driving a hoverbike to bring justice to the frontier.",
-      "category" : "leader",
-      "models" : [
-        {
-          "name" : "US Marshal on Hoverbike",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            "heavy_ccw",
-            "twin_assault_rifle",
-            "rifle"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            "leader",
-            {
-              "id" : "impact",
-              "x" : 1
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "rifle"
-              ],
-              "withWeapon" : [
-                "combat_shotgun"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "twin_assault_rifle"
-              ],
-              "withWeapon" : [
-                "twin_light_machine_gun"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "deputy_bike" : {
-      "name" : "US Deputy on Hoverbike",
-      "description" : "A United States deputy, driving a hoverbike to bring justice to the frontier.",
-      "category" : "specialist",
-      "models" : [
-        {
-          "name" : "US Deputy on Hoverbike",
-          "movement" : 8,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "heavy_ccw",
-            "rifle",
-            "twin_assault_rifle",
-            "plasma_pistol"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "rifle"
-              ],
-              "withWeapon" : [
-                "combat_shotgun"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "twin_assault_rifle"
-              ],
-              "withWeapon" : [
-                "twin_light_machine_gun"
-              ]
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "impact",
-              "x" : 1
-            }
-          ]
-        }
       ]
     },
     "deputy_heavy" : {
@@ -349,23 +464,22 @@
           "movement" : 6,
           "courage" : 5,
           "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
+          "fight" : 6,
+          "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "heavy_ccw",
-            "rifle",
-            "plasma_pistol"
+            "ccw",
+            "flamethrower",
+            "frag_grenades"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "rifle"
+                "flamethrower"
               ],
               "withWeapon" : [
-                "heavy_laser_rifle",
-                "plasma_cannon",
-                "flamethrower"
+                "rocket_launcher",
+                "light_machine_gun"
               ]
             }
           ],

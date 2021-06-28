@@ -15,32 +15,137 @@
           "movement" : 5,
           "courage" : 6,
           "shoot" : 5,
-          "fight" : 5,
+          "fight" : 6,
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "energy_ccw",
             "smoke_grenades",
-            "assault_carbine"
+            "carbine",
+            "heavy_ccw"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
-            "leader",
-            "evasive"
+            "leader"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "assault_carbine"
+                "carbine"
               ],
               "withWeapon" : [
-                "laser_carbine",
-                "plasma_shotgun"
+                "shotgun",
+                "plasma_rifle",
+                "sniper_rifle"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "carbine",
+                "heavy_ccw"
+              ],
+              "withWeapon" : [
+                [
+                  "pistol",
+                  {
+                    "id" : "heavy_ccw",
+                    "count" : 2
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "plasma_pistol"
               ]
             }
           ]
         }
+      ]
+    },
+    "general_bike" : {
+      "name" : "General on Hoverbike",
+      "description" : "",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "General on Hoverbike",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "heavy_ccw",
+            "carbine",
+            "light_machine_gun",
+            "smoke_grenades"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Biker"
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "carbine"
+              ],
+              "withWeapon" : [
+                "shotgun",
+                "plasma_rifle",
+                "sniper_rifle"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "carbine",
+                "heavy_ccw"
+              ],
+              "withWeapon" : [
+                [
+                  "pistol",
+                  {
+                    "id" : "heavy_ccw",
+                    "count" : 2
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "plasma_pistol"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "light_machine_gun"
+              ],
+              "withWeapon" : [
+                "heavy_machine_gun",
+                "rocket_launcher",
+                "flamethrower"
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Biker"
       ]
     },
     "rebel_sniper" : {
@@ -62,8 +167,15 @@
           ],
           "min" : 1,
           "max" : 1,
-          "rules" : [
-            "evasive"
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "sniper_rifle"
+              ],
+              "withWeapon" : [
+                "laser_sniper_rifle"
+              ]
+            }
           ]
         }
       ]
@@ -82,35 +194,41 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "throwing_axe",
-            "carbine"
+            {
+              "id" : "pistol",
+              "count" : 2
+            },
+            "throwing_axe"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
-            "evasive",
             "scout"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "carbine"
+                {
+                  "id" : "pistol",
+                  "count" : 2
+                }
               ],
               "withWeapon" : [
-                "laser_carbine"
+                "carbine",
+                "shotgun"
               ]
             }
           ]
         }
       ]
     },
-    "captain" : {
-      "name" : "Captain",
+    "rebel_sergeant" : {
+      "name" : "Rebel Sergeant",
       "description" : "",
-      "category" : "specialist",
+      "category" : "leader",
       "models" : [
         {
-          "name" : "Captain",
+          "name" : "Rebel Sergeant",
           "movement" : 6,
           "courage" : 5,
           "shoot" : 5,
@@ -118,25 +236,26 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "energy_ccw",
-            "assault_rifle"
+            "heavy_ccw",
+            "carbine",
+            "frag_grenades"
           ],
           "min" : 1,
           "max" : 1,
           "options" : [
             {
               "replaceWeapon" : [
-                "assault_rifle"
+                "carbine"
               ],
               "withWeapon" : [
-                "laser_rifle",
-                "plasma_shotgun"
+                "plasma_rifle",
+                "grenade_launcher",
+                "shotgun"
               ]
             }
           ],
           "rules" : [
-            "evasive",
-            "support"
+            "leader"
           ]
         }
       ]
@@ -189,47 +308,7 @@
               "id" : "heavy_ccw",
               "count" : 2
             },
-            "flamethrower"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "flamethrower"
-              ],
-              "withWeapon" : [
-                "heavy_machine_gun",
-                "rocket_pod",
-                "twin_heavy_laser_rifle"
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Automaton"
-      ]
-    },
-    "confederate_terminator" : {
-      "name" : "Confederate Terminator",
-      "description" : "",
-      "category" : "heavy",
-      "models" : [
-        {
-          "name" : "Confederate Terminator",
-          "movement" : 5,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            "heavy_ccw",
-            {
-              "id" : "light_machine_gun",
-              "count" : 2
-            }
+            "light_machine_gun"
           ],
           "min" : 1,
           "max" : 1,
@@ -239,29 +318,25 @@
                 "light_machine_gun"
               ],
               "withWeapon" : [
-                "rocket_pod",
-                "plasma_cannon",
-                "heavy_machine_gun"
-              ],
-              "modelLimit" : 2
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
+                "heavy_machine_gun",
+                "rocket_launcher",
+                "flamethrower"
+              ]
             }
           ]
         }
+      ],
+      "keywords" : [
+        "Automaton"
       ]
     },
-    "sergeant" : {
-      "name" : "Sergeant",
+    "rebel_captain" : {
+      "name" : "Rebel Captain",
       "description" : "",
       "category" : "specialist",
       "models" : [
         {
-          "name" : "Sergeant",
+          "name" : "Rebel Captain",
           "movement" : 6,
           "courage" : 5,
           "shoot" : 5,
@@ -270,22 +345,32 @@
           "reflexes" : 5,
           "weapons" : [
             "smoke_grenades",
-            "energy_ccw",
-            "assault_carbine"
+            "heavy_ccw",
+            "carbine"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
-            "evasive"
+            "scout",
+            "support"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "assault_carbine"
+                "carbine"
               ],
               "withWeapon" : [
-                "explosive_crossbow",
-                "plasma_shotgun"
+                "shotgun",
+                "plasma_rifle",
+                "laser_rifle"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "heavy_ccw"
+              ],
+              "withWeapon" : [
+                "energy_fist"
               ]
             }
           ]
@@ -303,94 +388,33 @@
           "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 4,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
             "throwing_axe",
             "plasma_grenades",
-            "assault_carbine"
+            "flamethrower"
           ],
           "min" : 1,
           "max" : 1,
-          "rules" : [
-            "evasive"
-          ],
           "options" : [
             {
               "replaceWeapon" : [
-                "assault_carbine"
+                "flamethrower"
               ],
               "withWeapon" : [
-                "light_machine_gun",
-                "sniper_rifle",
-                "flamethrower",
-                "plasma_shotgun"
+                "rocket_launcher",
+                "light_machine_gun"
               ]
             }
           ]
         }
-      ]
-    },
-    "general_bike" : {
-      "name" : "General on Hoverbike",
-      "description" : "",
-      "category" : "leader",
-      "models" : [
-        {
-          "name" : "General on Hoverbike",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            "heavy_ccw",
-            "assault_carbine",
-            "twin_assault_rifle"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            "evasive",
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Biker"
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "assault_carbine"
-              ],
-              "withWeapon" : [
-                "laser_carbine",
-                "plasma_shotgun"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "twin_assault_rifle"
-              ],
-              "withWeapon" : [
-                "twin_light_machine_gun"
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Biker"
       ]
     },
     "rebel_bike" : {
       "name" : "Rebel on Hoverbike",
       "description" : "",
-      "category" : "support",
+      "category" : "specialist",
       "models" : [
         {
           "name" : "Rebel on Hoverbike",
@@ -403,7 +427,7 @@
           "weapons" : [
             "throwing_axe",
             "carbine",
-            "twin_assault_rifle"
+            "light_machine_gun"
           ],
           "min" : 1,
           "max" : 1,
@@ -421,15 +445,17 @@
                 "carbine"
               ],
               "withWeapon" : [
-                "laser_carbine"
+                "shotgun"
               ]
             },
             {
               "replaceWeapon" : [
-                "twin_assault_rifle"
+                "light_machine_gun"
               ],
               "withWeapon" : [
-                "twin_light_machine_gun"
+                "heavy_machine_gun",
+                "rocket_launcher",
+                "flamethrower"
               ]
             }
           ]
@@ -438,36 +464,113 @@
       "keywords" : [
         "Biker"
       ]
-    }
-  },
-  "weapons" : {
-    "plasma_shotgun" : {
-      "name" : "Plasma Shotgun",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "assault",
-        "overheat",
-        "brutal"
+    },
+    "rebel_medic" : {
+      "name" : "Rebel Medic",
+      "description" : "",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Rebel Medic",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "pistol",
+            "ccw"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "medical_training"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "carbine"
+              ]
+            }
+          ]
+        }
       ]
     },
-    "explosive_crossbow" : {
-      "name" : "Explosive Crossbow",
-      "ap" : 3,
-      "attacks" : 1,
-      "medium" : 12,
-      "short" : 6,
+    "confederate_destroyer" : {
+      "name" : "Confederate Destroyer",
+      "description" : "",
       "rules" : [
-        "assault",
+        "ambush"
+      ],
+      "category" : "support",
+      "models" : [
         {
-          "id" : "ammo",
-          "x" : 3
+          "name" : "Confederate Destroyer",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 9,
+          "reflexes" : 6,
+          "weapons" : [
+            "twin_rifle",
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : "twin_rifle",
+              "withWeapon" : [
+                "combi_plasma",
+                "combi_flamethrower",
+                "combi_fusion"
+              ]
+            },
+            {
+              "replaceWeapon" : {
+                "id" : "heavy_ccw",
+                "count" : 2
+              },
+              "withWeapon" : [
+                {
+                  "id" : "energy_ccw",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_fist",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "twin_rifle",
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "energy_ccw",
+                  "count" : 4
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
         }
       ]
     }
   },
+  "weapons" : {},
   "rules" : {},
   "powers" : {},
   "strategies" : [],

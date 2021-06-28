@@ -16,7 +16,7 @@
           "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 4,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
             "laser_rifle",
@@ -30,10 +30,17 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "laser_rifle"
+                "laser_rifle",
+                "ccw"
               ],
               "withWeapon" : [
-                "laser_carbine"
+                [
+                  "laser_pistol",
+                  {
+                    "id" : "ccw",
+                    "count" : 2
+                  }
+                ]
               ]
             }
           ]
@@ -51,10 +58,10 @@
           "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 4,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "laser_rifle",
+            "flamethrower",
             "ccw"
           ],
           "min" : 1,
@@ -65,12 +72,11 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "laser_rifle"
+                "flamethrower"
               ],
               "withWeapon" : [
-                "light_machine_gun",
-                "heavy_laser_rifle",
-                "plasma_cannon"
+                "rocket_launcher",
+                "fusion_rifle"
               ]
             }
           ]
@@ -88,7 +94,7 @@
           "defense" : 6,
           "reflexes" : 4,
           "weapons" : [
-            "rocket_pod"
+            "heavy_machine_gun"
           ],
           "min" : 1,
           "max" : 1,
@@ -99,11 +105,12 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "rocket_pod"
+                "heavy_machine_gun"
               ],
               "withWeapon" : [
-                "heavy_machine_gun",
-                "twin_heavy_laser_rifle"
+                "rocket_pod",
+                "plasma_cannon",
+                "fusion_cannon"
               ]
             }
           ],
@@ -127,9 +134,9 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "laser_rifle",
             "energy_ccw",
-            "flashbangs"
+            "plasma_grenades",
+            "laser_rifle"
           ],
           "min" : 1,
           "max" : 1,
@@ -143,8 +150,10 @@
                 "laser_rifle"
               ],
               "withWeapon" : [
-                "laser_carbine",
-                "plasma_rifle"
+                "combi_plasma",
+                "combi_flamethrower",
+                "combi_fusion",
+                "twin_rifle"
               ]
             }
           ]
@@ -162,11 +171,11 @@
           "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 4,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "laser_rifle",
-            "ccw",
+            "plasma_rifle",
+            "heavy_ccw",
             "plasma_grenades"
           ],
           "min" : 1,
@@ -178,16 +187,11 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "laser_rifle"
+                "plasma_rifle"
               ],
               "withWeapon" : [
-                "heavy_laser_rifle",
-                "combat_shotgun"
-              ]
-            },
-            {
-              "addWeapon" : [
-                "rocket_launcher"
+                "flamethrower",
+                "fusion_rifle"
               ]
             }
           ]
@@ -205,10 +209,10 @@
           "courage" : 5,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 4,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "laser_rifle",
+            "laser_pistol",
             {
               "id" : "heavy_ccw",
               "count" : 2

@@ -1,27 +1,27 @@
 {
-  "name" : "Mercenaries",
-  "id" : "mercenaries",
+  "name" : "United States Army",
+  "id" : "us_army",
   "author" : "Xekon#8266",
   "version" : "0.1",
-  "alliance" : "outlaws",
+  "alliance" : "union",
   "units" : {
-    "boss" : {
-      "name" : "Boss",
-      "description" : "A fortune seeker, leading a small gang of outlaws.",
+    "general" : {
+      "name" : "General",
+      "description" : "",
       "category" : "leader",
       "models" : [
         {
-          "name" : "Boss",
-          "movement" : 6,
+          "name" : "General",
+          "movement" : 5,
           "courage" : 6,
           "shoot" : 5,
           "fight" : 6,
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "ccw",
+            "frag_grenades",
             "rifle",
-            "frag_grenades"
+            "heavy_ccw"
           ],
           "min" : 1,
           "max" : 1,
@@ -35,16 +35,19 @@
               ],
               "withWeapon" : [
                 "plasma_rifle",
-                "shotgun",
-                "sniper_rifle"
+                "twin_rifle"
               ]
             },
             {
               "replaceWeapon" : [
                 "rifle",
-                "ccw"
+                "heavy_ccw"
               ],
               "withWeapon" : [
+                {
+                  "id" : "energy_fist",
+                  "count" : 2
+                },
                 [
                   "pistol",
                   {
@@ -66,13 +69,13 @@
         }
       ]
     },
-    "boss_bike" : {
-      "name" : "Boss on Hoverbike",
-      "description" : "A fortune seeker, leading a small gang of outlaws.",
+    "general_bike" : {
+      "name" : "General on Jetbike",
+      "description" : "",
       "category" : "leader",
       "models" : [
         {
-          "name" : "Boss on Hoverbike",
+          "name" : "General on Hoverbike",
           "movement" : 8,
           "courage" : 6,
           "shoot" : 5,
@@ -80,21 +83,21 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "light_machine_gun",
+            "heavy_ccw",
             "rifle",
-            "ccw",
+            "light_machine_gun",
             "frag_grenades"
           ],
           "min" : 1,
           "max" : 1,
           "rules" : [
             {
-              "id" : "leader_x",
-              "x" : "Infantry, Biker"
-            },
-            {
               "id" : "impact",
               "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Biker"
             }
           ],
           "options" : [
@@ -103,15 +106,14 @@
                 "rifle"
               ],
               "withWeapon" : [
-                "shotgun",
                 "plasma_rifle",
-                "sniper_rifle"
+                "twin_rifle"
               ]
             },
             {
               "replaceWeapon" : [
                 "rifle",
-                "ccw"
+                "heavy_ccw"
               ],
               "withWeapon" : [
                 [
@@ -120,7 +122,11 @@
                     "id" : "ccw",
                     "count" : 2
                   }
-                ]
+                ],
+                {
+                  "id" : "energy_fist",
+                  "count" : 2
+                }
               ]
             },
             {
@@ -137,8 +143,8 @@
               ],
               "withWeapon" : [
                 "heavy_machine_gun",
-                "flamethrower",
-                "rocket_launcher"
+                "rocket_launcher",
+                "flamethrower"
               ]
             }
           ]
@@ -148,93 +154,13 @@
         "Biker"
       ]
     },
-    "bandit_thug" : {
-      "name" : "Bandit Thug",
-      "description" : "",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Bandit Thug",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "pistol",
-            {
-              "id" : "ccw",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "pistol",
-                {
-                  "id" : "ccw",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  "carbine",
-                  "ccw"
-                ],
-                {
-                  "id" : "ccw",
-                  "count" : 4
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "bandit_raider" : {
-      "name" : "Bandit Raider",
-      "description" : "",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Bandit Raider",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "ccw",
-            "rifle",
-            "frag_grenades"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "rifle"
-              ],
-              "withWeapon" : [
-                "shotgun",
-                "plasma_rifle"
-              ]
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "bandit_sniper" : {
-      "name" : "Bandit Sniper",
+    "union_sniper" : {
+      "name" : "Union Sniper",
       "description" : "",
       "category" : "specialist",
       "models" : [
         {
-          "name" : "Bandit Sniper",
+          "name" : "Union Sniper",
           "movement" : 6,
           "courage" : 5,
           "shoot" : 5,
@@ -242,9 +168,8 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "ccw",
             "sniper_rifle",
-            "smoke_grenades"
+            "heavy_ccw"
           ],
           "min" : 1,
           "max" : 1,
@@ -257,6 +182,121 @@
                 "laser_sniper_rifle"
               ]
             }
+          ]
+        }
+      ]
+    },
+    "union_rifleman" : {
+      "name" : "Union Rifleman",
+      "description" : "",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Union Rifleman",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "ccw",
+            "rifle",
+            "frag_grenades"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "rifle",
+                "ccw"
+              ],
+              "withWeapon" : [
+                [
+                  "pistol",
+                  {
+                    "id" : "ccw",
+                    "count" : 2
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "union_scout" : {
+      "name" : "Union Scout",
+      "description" : "",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Union Scout",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "ccw",
+            "carbine",
+            "frag_grenades"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "scout"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "carbine"
+              ],
+              "withWeapon" : [
+                "shotgun"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "union_sergeant" : {
+      "name" : "Union Sergeant",
+      "description" : "",
+      "category" : "leader",
+      "models" : [
+        {
+          "name" : "Union Sergeant",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "heavy_ccw",
+            "rifle",
+            "frag_grenades"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "rifle"
+              ],
+              "withWeapon" : [
+                "combi_fusion",
+                "combi_flamethrower",
+                "combi_plasma",
+                "twin_rifle"
+              ]
+            }
+          ],
+          "rules" : [
+            "leader"
           ]
         }
       ]
@@ -331,68 +371,13 @@
         "Automaton"
       ]
     },
-    "bandit_bike" : {
-      "name" : "Bandit on Hoverbike",
-      "description" : "",
-      "category" : "specialist",
-      "keywords" : [
-        "Biker"
-      ],
-      "models" : [
-        {
-          "name" : "Bandit on Hoverbike",
-          "movement" : 8,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "ccw",
-            "rifle",
-            "frag_grenades",
-            "light_machine_gun"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "rifle"
-              ],
-              "withWeapon" : [
-                "shotgun",
-                "plasma_rifle",
-                "sniper_rifle"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "light_machine_gun"
-              ],
-              "withWeapon" : [
-                "heavy_machine_gun",
-                "rocket_launcher",
-                "flamethrower"
-              ]
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "impact",
-              "x" : 1
-            }
-          ]
-        }
-      ]
-    },
-    "bandit_heavy" : {
-      "name" : "Bandit Heavy",
+    "union_heavy" : {
+      "name" : "Union Heavy",
       "description" : "",
       "category" : "heavy",
       "models" : [
         {
-          "name" : "Bandit Heavy",
+          "name" : "Union Heavy",
           "movement" : 6,
           "courage" : 5,
           "shoot" : 6,
@@ -401,17 +386,155 @@
           "reflexes" : 5,
           "weapons" : [
             "ccw",
-            "flamethrower",
-            "frag_grenades"
+            "frag_grenades",
+            "flamethrower"
           ],
+          "min" : 1,
+          "max" : 1,
           "options" : [
             {
               "replaceWeapon" : [
                 "flamethrower"
               ],
               "withWeapon" : [
-                "rocket_launcher",
+                "grenade_launcher",
                 "light_machine_gun"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "union_cavalier" : {
+      "name" : "Union Cavalier on Iron Horse",
+      "description" : "",
+      "category" : "specialist",
+      "models" : [
+        {
+          "name" : "Union Cavalier on Iron Horse",
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "pistol",
+            {
+              "id" : "trample",
+              "count" : 2
+            },
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            },
+            "frag_grenades"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            "outflank"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "plasma_pistol"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "pistol",
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  "rifle",
+                  "heavy_ccw"
+                ],
+                [
+                  "grenade_launcher",
+                  "ccw"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Biker"
+      ]
+    },
+    "union_destroyer" : {
+      "name" : "Union Destroyer",
+      "description" : "",
+      "rules" : [
+        "ambush"
+      ],
+      "category" : "support",
+      "models" : [
+        {
+          "name" : "Union Destroyer",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 9,
+          "reflexes" : 6,
+          "weapons" : [
+            "twin_rifle",
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : "twin_rifle",
+              "withWeapon" : [
+                "combi_plasma",
+                "combi_flamethrower",
+                "combi_fusion"
+              ]
+            },
+            {
+              "replaceWeapon" : {
+                "id" : "heavy_ccw",
+                "count" : 2
+              },
+              "withWeapon" : [
+                {
+                  "id" : "energy_ccw",
+                  "count" : 2
+                },
+                {
+                  "id" : "energy_fist",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "twin_rifle",
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "energy_ccw",
+                  "count" : 4
+                }
               ]
             }
           ],
@@ -426,5 +549,5 @@
   "powers" : {},
   "strategies" : [],
   "relics" : [],
-  "color" : "#954535"
+  "color" : "#0d407f"
 }

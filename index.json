@@ -1064,7 +1064,8 @@
       "short" : 6,
       "medium" : 12,
       "rules" : [
-        "rapid_fire"
+        "rapid_fire",
+        "assault"
       ]
     },
     "twin_smg" : {
@@ -1073,7 +1074,8 @@
       "short" : 6,
       "medium" : 12,
       "rules" : [
-        "rapid_fire"
+        "rapid_fire",
+        "assault"
       ]
     },
     "heavy_smg" : {
@@ -1083,7 +1085,8 @@
       "medium" : 12,
       "short" : 6,
       "rules" : [
-        "rapid_fire"
+        "rapid_fire",
+        "assault"
       ]
     },
     "twin_heavy_smg" : {
@@ -1093,7 +1096,8 @@
       "medium" : 12,
       "short" : 6,
       "rules" : [
-        "rapid_fire"
+        "rapid_fire",
+        "assault"
       ]
     },
     "shotgun_pistol" : {
@@ -1103,6 +1107,30 @@
       "short" : 9,
       "rules" : [
         "assault"
+      ]
+    },
+    "combi_rifle" : {
+      "name" : "Combi-Rifle",
+      "profiles" : [
+        {
+          "name" : "Single",
+          "attacks" : 1,
+          "short" : 12,
+          "medium" : 24,
+          "rules" : [
+            "rapid_fire"
+          ]
+        },
+        {
+          "name" : "Rapid",
+          "attacks" : 2,
+          "short" : 12,
+          "medium" : 24,
+          "rules" : [
+            "rapid_fire",
+            "unreliable"
+          ]
+        }
       ]
     }
   },
@@ -1147,6 +1175,32 @@
       "description" : "This weapon hits at Accuracy +1.",
       "points" : [
         "weapon.attacks"
+      ]
+    },
+    "melee_tactics" : {
+      "name" : "Melee Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    },
+    "ranged_tactics" : {
+      "name" : "Ranged Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
       ]
     }
   }
